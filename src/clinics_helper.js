@@ -1,32 +1,16 @@
 import getClinics from './clinics_data.js';
 
-/**
- * Filters list of given clinics with keyValues
- * @param [keyValues] {Object} filters in a form of {k: {key: a, value: true}, k: {key: b, value: false}}
- * @returns {Array}
- */
-export function filterClinics(keyValues = {}) {
-	let filtered = getClinics();
-	let keys = keyValues && Object.keys(keyValues);
-
-	if (keys.length) {
-		keys.forEach(function(k) {
-			let kv = keyValues[k];
-			filtered = filtered.filter(function (obj) {
-				return obj[kv.key] === kv.value;
-			});
-		});
-	}
-	return filtered;
-}
-
+let chains = [];
 /**
  * Extract all chains from filtered clinics
  *
- * @param [withTotals] {Boolean} if we need totals for every chain
  * @returns {Array} chains from given clinics
  */
-function getChains(withTotals = false) {
+function getChains() {
+	if (chains && chains.length) {
+		return chains;
+	}
+
 	let allClinics = getClinics();
 	let chainCounts = {};
 
@@ -34,16 +18,17 @@ function getChains(withTotals = false) {
 		chainCounts[obj.chain] = (chainCounts[obj.chain] || 0) + 1;
 	});
 
-	return Object.keys(chainCounts).map(function (k) {
+	chains = Object.keys(chainCounts).map(function (k) {
 		let name = k || 'Несетевая';
 		name = name.replace(/^Сеть клиник /, '');
 		return {
 			value: k,
-			label: name + (withTotals ? ' (' + chainCounts[k] + ')' : '')
+			label: name + ' (' + chainCounts[k] + ')'
 		};
 	});
-}
 
+	return chains;
+}
 
 /**
  * Working with selected filters
@@ -78,7 +63,7 @@ class ActiveFilters {
 	}
 }
 
-export let activeFilters = new ActiveFilters();
+//export let activeFilters = new ActiveFilters();
 
 /**
  * Working with all available filters
@@ -90,7 +75,7 @@ class AvailableFilters {
 
 	getFilters() {
 		let filters = [];
-		let chains = getChains(true);
+		let chains = getChains();
 
 		filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
 		filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
@@ -113,4 +98,36 @@ class AvailableFilters {
 	}
 }
 
-export let availableFilters = new AvailableFilters(activeFilters);
+//export let availableFilters = new AvailableFilters(activeFilters);
+
+class ClinicsModel {
+	constructor() {
+		this.activeFilters = new ActiveFilters();
+		this.availableFilters = new AvailableFilters(this.activeFilters);
+	}
+	/**
+	 * Filters list of given clinics with keyValues
+	 * @param [keyValues] {Object} filters in a form of {k: {key: a, value: true}, k: {key: b, value: false}}
+	 * @returns {Array}
+	 */
+	filter(keyValues = {}) {
+		let filtered = getClinics();
+		let keys = keyValues && Object.keys(keyValues);
+
+		if (keys.length) {
+			keys.forEach(function(k) {
+				let kv = keyValues[k];
+				filtered = filtered.filter(function (obj) {
+					return obj[kv.key] === kv.value;
+				});
+			});
+		}
+		return filtered;
+	}
+
+	getFiltered() {
+		return this.filter(this.activeFilters.getFilters());
+	}
+}
+
+export let clinicsModel = new ClinicsModel();

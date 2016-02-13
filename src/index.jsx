@@ -2,7 +2,7 @@ require("../node_modules/bootstrap/dist/css/bootstrap.min.css");
 require("./index.css");
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { filterClinics, availableFilters, activeFilters } from './clinics_helper.js';
+import { clinicsModel } from './clinics_helper.js';
 import Map from './map/map.jsx';
 import Filters from './filters/filters.jsx';
 import ClinicsList from './clinics_list/clinics_list.jsx';
@@ -11,11 +11,11 @@ import ClinicsList from './clinics_list/clinics_list.jsx';
 export class App extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {clinics: filterClinics(activeFilters.getFilters())};
+		this.state = {clinics: clinicsModel.getFiltered()};
 	}
 
 	updateClinics() {
-		this.setState({clinics: filterClinics(activeFilters.getFilters())});
+		this.setState({clinics: clinicsModel.getFiltered()});
 	}
 
 	onFiltersChange() {

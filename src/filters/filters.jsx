@@ -2,29 +2,29 @@ require("./filters.css");
 import React from 'react';
 import FilterCheckbox from './filter_checkbox.jsx';
 import FilterRadio from './filter_radio.jsx';
-import { availableFilters, activeFilters } from '../clinics_helper.js';
+import { clinicsModel } from '../clinics_helper.js';
 import YMaps from '../map/ymaps.js';
 
 
 class Filters extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {filters: availableFilters.getFilters()};
+		this.state = {filters: clinicsModel.availableFilters.getFilters()};
 	}
 
 	onFilterChange(newFilterState) {
 		let key = newFilterState.key;
-		activeFilters.updateFilters({[key]: newFilterState});
+		clinicsModel.activeFilters.updateFilters({[key]: newFilterState});
 		this.updateClinicsList();
 	}
 
 	onFiltersReset() {
-		activeFilters.resetFilters();
+		clinicsModel.activeFilters.resetFilters();
 		this.updateClinicsList();
 	}
 
 	updateClinicsList() {
-		this.setState({filters: availableFilters.getFilters()});
+		this.setState({filters: clinicsModel.availableFilters.getFilters()});
 		YMaps.updateMarkers();
 
 		if (this.props.onChange) {

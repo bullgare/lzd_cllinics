@@ -1,5 +1,5 @@
 //import getClinics from './clinics_data.js';
-import { activeFilters, filterClinics } from './../clinics_helper.js';
+import { clinicsModel } from './../clinics_helper.js';
 
 ymaps.ready(init);
 
@@ -89,7 +89,7 @@ export default class YMaps {
 	 * Update markers by current filtered clinics
 	 */
 	static updateMarkers() {
-		addObjects(filterClinics(activeFilters.getFilters()));
+		addObjects(clinicsModel.getFiltered());
 	}
 
 	/**
