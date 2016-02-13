@@ -3,9 +3,9 @@ require("./index.css");
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { clinicsModel } from './models/clinics/clinics.js';
-import Map from './map/map.jsx';
-import Filters from './filters/filters.jsx';
-import ClinicsList from './clinics_list/clinics_list.jsx';
+import Map from './components/map/map.jsx';
+import Filters from './components/filters/filters.jsx';
+import ClinicsList from './components/clinics_list/clinics_list.jsx';
 
 
 export class App extends React.Component {
