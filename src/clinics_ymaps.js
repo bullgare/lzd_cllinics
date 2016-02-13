@@ -16,9 +16,11 @@ function init () {
 	updateClinics();
 }
 
+let placemarksByIds = {};
 function addObjects(clinics) {
 	let mapObjects = myMap.geoObjects;
 	mapObjects.removeAll();
+	placemarksByIds = {};
 
 	clinics.forEach(function (obj) {addObject(obj);});
 
@@ -59,12 +61,14 @@ function addObjects(clinics) {
 		}
 		content += '</dl>';
 
-		mapObjects.add(new ymaps.Placemark(obj.coords, {
+		let placemark = new ymaps.Placemark(obj.coords, {
 			balloonContent: content
 		}, {
 			preset: 'islands#dotIcon',
 			iconColor: color
-		}))
+		});
+		placemarksByIds[obj.id] = placemark;
+		mapObjects.add(placemark);
 	}
 }
 
@@ -72,4 +76,11 @@ function updateClinics() {
 	addObjects(filterClinics(activeFilters.getFilters()));
 }
 
+export function openBalloonById(id) {
+	if (placemarksByIds[id]) {
+		placemarksByIds[id].balloon.open();
+	}
+}
+
 export default updateClinics;
+//export openBalloonById;

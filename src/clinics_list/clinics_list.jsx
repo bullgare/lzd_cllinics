@@ -1,5 +1,6 @@
 require("./clinics_list.css");
 import React from 'react';
+import { openBalloonById } from '../clinics_ymaps.js';
 
 
 class ClinicsList extends React.Component {
@@ -7,12 +8,19 @@ class ClinicsList extends React.Component {
 		super(props);
 	}
 
+	openBalloon(id) {
+		openBalloonById(id);
+	}
+
 	render() {
 		return (
 			<div>
 				<ul className="list-group">
 					{this.props.clinics.map((clinic, i) => {
-						return <li className="list-group-item" key={clinic.id}>
+						return <li
+								className="clinics-list list-group-item btn"
+								onClick={this.openBalloon.bind(this, clinic.id)}
+								key={clinic.id}>
 							<div className="list-group-item-heading">
 								{clinic.name}
 							</div>

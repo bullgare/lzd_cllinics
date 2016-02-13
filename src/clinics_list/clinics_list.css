@@ -2,3 +2,8 @@
 	max-height: 300px;
 	overflow: auto;
 }
+
+.clinics-list.btn {
+	text-align: left;
+	white-space: normal;
+}
