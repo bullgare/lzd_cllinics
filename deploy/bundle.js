@@ -63,7 +63,7 @@
 
 	var _reactDom2 = _interopRequireDefault(_reactDom);
 
-	var _clinics_helper = __webpack_require__(159);
+	var _clinics = __webpack_require__(159);
 
 	var _map = __webpack_require__(161);
 
@@ -96,14 +96,14 @@
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 
-			_this.state = { clinics: (0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()) };
+			_this.state = { clinics: _clinics.clinicsModel.getFiltered() };
 			return _this;
 		}
 
 		_createClass(App, [{
 			key: "updateClinics",
 			value: function updateClinics() {
-				this.setState({ clinics: (0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()) });
+				this.setState({ clinics: _clinics.clinicsModel.getFiltered() });
 			}
 		}, {
 			key: "onFiltersChange",
@@ -19777,7 +19777,7 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.availableFilters = exports.activeFilters = undefined;
+	exports.clinicsModel = undefined;
 
 	var _createClass = function () {
 		function defineProperties(target, props) {
@@ -19789,11 +19789,9 @@
 		};
 	}();
 
-	exports.filterClinics = filterClinics;
+	var _data = __webpack_require__(160);
 
-	var _clinics_data = __webpack_require__(160);
-
-	var _clinics_data2 = _interopRequireDefault(_clinics_data);
+	var _data2 = _interopRequireDefault(_data);
 
 	function _interopRequireDefault(obj) {
 		return obj && obj.__esModule ? obj : { default: obj };
@@ -19805,52 +19803,34 @@
 		}
 	}
 
-	/**
-	 * Filters list of given clinics with keyValues
-	 * @param [keyValues] {Object} filters in a form of {k: {key: a, value: true}, k: {key: b, value: false}}
-	 * @returns {Array}
-	 */
-	function filterClinics() {
-		var keyValues = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
-
-		var filtered = (0, _clinics_data2.default)();
-		var keys = keyValues && Object.keys(keyValues);
-
-		if (keys.length) {
-			keys.forEach(function (k) {
-				var kv = keyValues[k];
-				filtered = filtered.filter(function (obj) {
-					return obj[kv.key] === kv.value;
-				});
-			});
-		}
-		return filtered;
-	}
-
+	var chains = [];
 	/**
 	 * Extract all chains from filtered clinics
 	 *
-	 * @param [withTotals] {Boolean} if we need totals for every chain
 	 * @returns {Array} chains from given clinics
 	 */
 	function getChains() {
-		var withTotals = arguments.length <= 0 || arguments[0] === undefined ? false : arguments[0];
+		if (chains && chains.length) {
+			return chains;
+		}
 
-		var allClinics = (0, _clinics_data2.default)();
+		var allClinics = (0, _data2.default)();
 		var chainCounts = {};
 
 		allClinics.forEach(function (obj) {
 			chainCounts[obj.chain] = (chainCounts[obj.chain] || 0) + 1;
 		});
 
-		return Object.keys(chainCounts).map(function (k) {
+		chains = Object.keys(chainCounts).map(function (k) {
 			var name = k || 'Несетевая';
 			name = name.replace(/^Сеть клиник /, '');
 			return {
 				value: k,
-				label: name + (withTotals ? ' (' + chainCounts[k] + ')' : '')
+				label: name + ' (' + chainCounts[k] + ')'
 			};
 		});
+
+		return chains;
 	}
 
 	/**
@@ -19900,7 +19880,7 @@
 		return ActiveFilters;
 	}();
 
-	var activeFilters = exports.activeFilters = new ActiveFilters();
+	//export let activeFilters = new ActiveFilters();
 
 	/**
 	 * Working with all available filters
@@ -19919,7 +19899,7 @@
 				var _this2 = this;
 
 				var filters = [];
-				var chains = getChains(true);
+				var chains = getChains();
 
 				filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
 				filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
@@ -19948,9 +19928,52 @@
 		return AvailableFilters;
 	}();
 
-	var availableFilters = exports.availableFilters = new AvailableFilters(activeFilters);
+	//export let availableFilters = new AvailableFilters(activeFilters);
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_helper.js" + ": " + err.message); } }); } } })(); }
+	var ClinicsModel = function () {
+		function ClinicsModel() {
+			_classCallCheck(this, ClinicsModel);
+
+			this.activeFilters = new ActiveFilters();
+			this.availableFilters = new AvailableFilters(this.activeFilters);
+		}
+		/**
+	  * Filters list of given clinics with keyValues
+	  * @param [keyValues] {Object} filters in a form of {k: {key: a, value: true}, k: {key: b, value: false}}
+	  * @returns {Array}
+	  */
+
+		_createClass(ClinicsModel, [{
+			key: 'filter',
+			value: function filter() {
+				var keyValues = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
+
+				var filtered = (0, _data2.default)();
+				var keys = keyValues && Object.keys(keyValues);
+
+				if (keys.length) {
+					keys.forEach(function (k) {
+						var kv = keyValues[k];
+						filtered = filtered.filter(function (obj) {
+							return obj[kv.key] === kv.value;
+						});
+					});
+				}
+				return filtered;
+			}
+		}, {
+			key: 'getFiltered',
+			value: function getFiltered() {
+				return this.filter(this.activeFilters.getFilters());
+			}
+		}]);
+
+		return ClinicsModel;
+	}();
+
+	var clinicsModel = exports.clinicsModel = new ClinicsModel();
+
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 160 */
@@ -20393,7 +20416,7 @@
 
 	exports.default = getClinics;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_data.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "data.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 161 */
@@ -20462,8 +20485,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./map.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./map.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./map.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./map.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20822,7 +20845,7 @@
 
 	var _filter_radio2 = _interopRequireDefault(_filter_radio);
 
-	var _clinics_helper = __webpack_require__(159);
+	var _clinics = __webpack_require__(159);
 
 	var _ymaps = __webpack_require__(170);
 
@@ -20848,7 +20871,7 @@
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Filters).call(this, props));
 
-			_this.state = { filters: _clinics_helper.availableFilters.getFilters() };
+			_this.state = { filters: _clinics.clinicsModel.availableFilters.getFilters() };
 			return _this;
 		}
 
@@ -20856,19 +20879,19 @@
 			key: 'onFilterChange',
 			value: function onFilterChange(newFilterState) {
 				var key = newFilterState.key;
-				_clinics_helper.activeFilters.updateFilters(_defineProperty({}, key, newFilterState));
+				_clinics.clinicsModel.activeFilters.updateFilters(_defineProperty({}, key, newFilterState));
 				this.updateClinicsList();
 			}
 		}, {
 			key: 'onFiltersReset',
 			value: function onFiltersReset() {
-				_clinics_helper.activeFilters.resetFilters();
+				_clinics.clinicsModel.activeFilters.resetFilters();
 				this.updateClinicsList();
 			}
 		}, {
 			key: 'updateClinicsList',
 			value: function updateClinicsList() {
-				this.setState({ filters: _clinics_helper.availableFilters.getFilters() });
+				this.setState({ filters: _clinics.clinicsModel.availableFilters.getFilters() });
 				_ymaps2.default.updateMarkers();
 
 				if (this.props.onChange) {
@@ -21139,9 +21162,9 @@
 		}return function (Constructor, protoProps, staticProps) {
 			if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
 		};
-	}(); //import getClinics from './data.js';
+	}(); //import getClinics from './clinics_data.js';
 
-	var _clinics_helper = __webpack_require__(159);
+	var _clinics = __webpack_require__(159);
 
 	function _classCallCheck(instance, Constructor) {
 		if (!(instance instanceof Constructor)) {
@@ -21244,7 +21267,7 @@
 	   * Update markers by current filtered clinics
 	   */
 			value: function updateMarkers() {
-				addObjects((0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()));
+				addObjects(_clinics.clinicsModel.getFiltered());
 			}
 
 			/**
@@ -21289,8 +21312,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./filters.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./filters.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./filters.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./filters.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -21431,8 +21454,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./clinics_list.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./clinics_list.css");
+			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./clinics_list.css", function() {
+				var newContent = require("!!./../../../node_modules/css-loader/index.js!./clinics_list.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});

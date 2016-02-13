@@ -4,7 +4,7 @@
   "description": "lzd clinics",
   "main": "''",
   "scripts": {
-    "build": "webpack --progress --profile --colors --config webpack.prod.config.js",
+    "build": "DEPLOY_TO_PROD=1 webpack --progress --profile --colors",
     "dev": "webpack-dev-server --progress --profile --colors --hot"
   },
   "repository": {

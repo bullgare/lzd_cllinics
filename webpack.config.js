@@ -1,15 +1,16 @@
 var webpack = require('webpack');
 var path = require('path');
 
-module.exports = {
+var isProd = process.env.DEPLOY_TO_PROD;
+
+var config = {
     entry: [
-    'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
-    'webpack/hot/only-dev-server',
-    './src/index.jsx' // Your appʼs entry point
-  ],
-    devtool: process.env.WEBPACK_DEVTOOL || 'source-map',
+        'webpack-dev-server/client?http://0.0.0.0:8080', // WebpackDevServer host and port
+        'webpack/hot/only-dev-server',
+        path.resolve(__dirname, 'src/index.jsx') // Your appʼs entry point
+    ],
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.resolve(__dirname, isProd ? 'deploy' : 'public'),
         filename: 'bundle.js'
     },
     resolve: {
@@ -61,7 +62,7 @@ module.exports = {
                 loader: "url-loader?limit=10000&mimetype=image/png"
             }
 
-             ]
+        ]
     },
     devServer: {
         contentBase: "./public",
@@ -70,6 +71,12 @@ module.exports = {
         inline: true
     },
     plugins: [
-      new webpack.NoErrorsPlugin()
+        new webpack.NoErrorsPlugin()
     ]
 };
+
+if (isProd) {
+    config.entry = path.resolve(__dirname, 'src/index.jsx');
+}
+
+module.exports = config;
