@@ -21125,6 +21125,7 @@
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
+	exports.openBalloonById = openBalloonById;
 
 	var _clinics_helper = __webpack_require__(159);
 
@@ -21143,9 +21144,11 @@
 		updateClinics();
 	}
 
+	var placemarksByIds = {};
 	function addObjects(clinics) {
 		var mapObjects = myMap.geoObjects;
 		mapObjects.removeAll();
+		placemarksByIds = {};
 
 		clinics.forEach(function (obj) {
 			addObject(obj);
@@ -21187,12 +21190,14 @@
 			}
 			content += '</dl>';
 
-			mapObjects.add(new ymaps.Placemark(obj.coords, {
+			var placemark = new ymaps.Placemark(obj.coords, {
 				balloonContent: content
 			}, {
 				preset: 'islands#dotIcon',
 				iconColor: color
-			}));
+			});
+			placemarksByIds[obj.id] = placemark;
+			mapObjects.add(placemark);
 		}
 	}
 
@@ -21200,7 +21205,14 @@
 		addObjects((0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()));
 	}
 
+	function openBalloonById(id) {
+		if (placemarksByIds[id]) {
+			placemarksByIds[id].balloon.open();
+		}
+	}
+
 	exports.default = updateClinics;
+	//export openBalloonById;
 
 	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_ymaps.js" + ": " + err.message); } }); } } })(); }
 
@@ -21250,7 +21262,7 @@
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
@@ -21261,6 +21273,8 @@
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var _clinics_ymaps = __webpack_require__(170);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21282,38 +21296,48 @@
 		}
 
 		_createClass(ClinicsList, [{
-			key: "render",
+			key: 'openBalloon',
+			value: function openBalloon(id) {
+				(0, _clinics_ymaps.openBalloonById)(id);
+			}
+		}, {
+			key: 'render',
 			value: function render() {
+				var _this2 = this;
+
 				return _react2.default.createElement(
-					"div",
+					'div',
 					null,
 					_react2.default.createElement(
-						"ul",
-						{ className: "list-group" },
+						'ul',
+						{ className: 'list-group' },
 						this.props.clinics.map(function (clinic, i) {
 							return _react2.default.createElement(
-								"li",
-								{ className: "list-group-item", key: clinic.id },
+								'li',
+								{
+									className: 'clinics-list list-group-item btn',
+									onClick: _this2.openBalloon.bind(_this2, clinic.id),
+									key: clinic.id },
 								_react2.default.createElement(
-									"div",
-									{ className: "list-group-item-heading" },
+									'div',
+									{ className: 'list-group-item-heading' },
 									clinic.name
 								),
 								_react2.default.createElement(
-									"div",
-									{ className: "list-group-item-text" },
+									'div',
+									{ className: 'list-group-item-text' },
 									_react2.default.createElement(
-										"div",
+										'div',
 										null,
 										clinic.address
 									),
 									_react2.default.createElement(
-										"div",
+										'div',
 										null,
 										clinic.hours
 									),
 									_react2.default.createElement(
-										"div",
+										'div',
 										null,
 										clinic.phones
 									)
@@ -21367,7 +21391,7 @@
 
 
 	// module
-	exports.push([module.id, ".clinics-list {\n\tmax-height: 300px;\n\toverflow: auto;\n}", ""]);
+	exports.push([module.id, ".clinics-list {\n\tmax-height: 300px;\n\toverflow: auto;\n}\n\n.clinics-list.btn {\n\ttext-align: left;\n\twhite-space: normal;\n}", ""]);
 
 	// exports
 
