@@ -1,5 +1,5 @@
 //import getClinics from './clinics_data.js';
-import { clinicsModel } from './../clinics_helper.js';
+import { clinicsModel } from './../models/clinics_helper.js';
 
 ymaps.ready(init);
 
