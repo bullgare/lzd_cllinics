@@ -21164,61 +21164,73 @@
 	}
 
 	var placemarksByIds = {};
+	/**
+	 * Redraw markers on a map by clinics data
+	 * @param clinics {Array}
+	 */
 	function addObjects(clinics) {
 		var mapObjects = myMap.geoObjects;
 		mapObjects.removeAll();
 		placemarksByIds = {};
 
-		clinics.forEach(function (obj) {
-			addObject(obj);
+		clinics.forEach(function (clinic) {
+			addObject(clinic);
 		});
 
-		function addObject(obj) {
+		function addObject(clinic) {
 			var color = '#a5260a';
-			if (obj.dental) {
+			if (clinic.dental) {
 				color = '#0095b6';
-			} else if (!obj.home) {
+			} else if (!clinic.home) {
 				color = '#735184';
 			}
 
-			var services = [];
-			if (obj.dental) {
-				services.push('стоматология');
-			}
-			if (obj.home) {
-				services.push('вызов врача');
-			}
-
-			var content = '';
-			if (obj.name) {
-				content += '<h2>' + obj.name + '</h2>\n';
-			}
-			if (obj.address) {
-				content += '<h4>' + obj.address + '</h4>\n';
-			}
-
-			content += '<dl class="dl-horizontal">';
-			if (obj.phones) {
-				content += '<dt>Телефоны</dt><dd>' + obj.phones + '</dd>\n';
-			}
-			if (obj.hours) {
-				content += '<dt>Режим</dt><dd>' + obj.hours + '</dd>\n';
-			}
-			if (services.length) {
-				content += '<dt>Услуги</dt><dd>' + services.join(', ') + '</dd>\n';
-			}
-			content += '</dl>';
-
-			var placemark = new ymaps.Placemark(obj.coords, {
-				balloonContent: content
+			var placemark = new ymaps.Placemark(clinic.coords, {
+				balloonContent: generateContentForMarker(clinic)
 			}, {
 				preset: 'islands#dotIcon',
 				iconColor: color
 			});
-			placemarksByIds[obj.id] = placemark;
+			placemarksByIds[clinic.id] = placemark;
 			mapObjects.add(placemark);
 		}
 	}
+
+	function generateContentForMarker(clinic) {
+		var services = [];
+		if (clinic.dental) {
+			services.push('стоматология');
+		}
+		if (clinic.home) {
+			services.push('вызов врача');
+		}
+
+		var content = '';
+		if (clinic.name) {
+			content += '<h2>' + clinic.name + '</h2>\n';
+		}
+		if (clinic.address) {
+			content += '<h4>' + clinic.address + '</h4>\n';
+		}
+
+		content += '<dl class="dl-horizontal">';
+		if (clinic.phones) {
+			content += '<dt>Телефоны</dt><dd>' + clinic.phones + '</dd>\n';
+		}
+		if (clinic.hours) {
+			content += '<dt>Режим</dt><dd>' + clinic.hours + '</dd>\n';
+		}
+		if (services.length) {
+			content += '<dt>Услуги</dt><dd>' + services.join(', ') + '</dd>\n';
+		}
+		content += '</dl>';
+
+		return content;
+	}
+
+	/**
+	 * Methods for working with yandex maps
+	 */
 
 	var YMaps = function () {
 		function YMaps() {
@@ -21227,17 +21239,29 @@
 
 		_createClass(YMaps, null, [{
 			key: "updateMarkers",
+
+			/**
+	   * Update markers by current filtered clinics
+	   */
 			value: function updateMarkers() {
 				addObjects((0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()));
 			}
+
+			/**
+	   * Toggles balloon by clinic is
+	   * @param id {Number}
+	   */
+
 		}, {
-			key: "openBalloonById",
-			value: function openBalloonById(id) {
+			key: "toggleBalloonById",
+			value: function toggleBalloonById(id) {
 				if (placemarksByIds[id]) {
 					var balloon = placemarksByIds[id].balloon;
 					if (balloon.isOpen()) {
 						balloon.close();
-					} else balloon.open();
+					} else {
+						balloon.open();
+					}
 				}
 			}
 		}]);
@@ -21333,7 +21357,7 @@
 		_createClass(ClinicsList, [{
 			key: 'openBalloon',
 			value: function openBalloon(id) {
-				_ymaps2.default.openBalloonById(id);
+				_ymaps2.default.toggleBalloonById(id);
 			}
 		}, {
 			key: 'render',
