@@ -21207,7 +21207,10 @@
 
 	function openBalloonById(id) {
 		if (placemarksByIds[id]) {
-			placemarksByIds[id].balloon.open();
+			var balloon = placemarksByIds[id].balloon;
+			if (balloon.isOpen()) {
+				balloon.close();
+			} else balloon.open();
 		}
 	}
 
