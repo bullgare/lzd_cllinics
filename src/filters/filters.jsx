@@ -15,14 +15,21 @@ class Filters extends React.Component {
 	onFilterChange(newFilterState) {
 		let key = newFilterState.key;
 		activeFilters.updateFilters({[key]: newFilterState});
-		this.setState({filters: availableFilters.getFilters()});
-		updateClinics();
+		this.updateClinicsList();
 	}
 
 	onFiltersReset() {
 		activeFilters.resetFilters();
+		this.updateClinicsList();
+	}
+
+	updateClinicsList() {
 		this.setState({filters: availableFilters.getFilters()});
 		updateClinics();
+
+		if (this.props.onChange) {
+			this.props.onChange();
+		}
 	}
 
 	render() {
