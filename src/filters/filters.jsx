@@ -3,7 +3,7 @@ import React from 'react';
 import FilterCheckbox from './filter_checkbox.jsx';
 import FilterRadio from './filter_radio.jsx';
 import { availableFilters, activeFilters } from '../clinics_helper.js';
-import YMaps from '../ymaps.js'
+import YMaps from '../map/ymaps.js';
 
 
 class Filters extends React.Component {

@@ -1,6 +1,6 @@
 require("./clinics_list.css");
 import React from 'react';
-import YMaps from '../ymaps.js';
+import YMaps from '../map/ymaps.js';
 
 
 class ClinicsList extends React.Component {
@@ -9,7 +9,7 @@ class ClinicsList extends React.Component {
 	}
 
 	openBalloon(id) {
-		YMaps.openBalloonById(id);
+		YMaps.toggleBalloonById(id);
 	}
 
 	render() {
