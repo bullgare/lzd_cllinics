@@ -15,7 +15,7 @@ class ClinicsList extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul className="list-group">
+				<ul className="list-group btn-group-vertical">
 					{this.props.clinics.map((clinic, i) => {
 						return <li
 								className="clinics-list list-group-item btn"
