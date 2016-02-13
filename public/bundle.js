@@ -28416,7 +28416,7 @@
 	
 	var _clinics_helper = __webpack_require__(243);
 	
-	ymaps.ready(init); //import getClinics from './clinics_data.js';
+	ymaps.ready(init); //import getClinics from './data.js';
 	
 	var myMap = undefined;
 	

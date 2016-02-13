@@ -1,4 +1,4 @@
-import getClinics from './clinics_data.js';
+import getClinics from './data.js';
 
 let chains = [];
 /**

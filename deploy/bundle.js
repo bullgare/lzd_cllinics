@@ -21139,7 +21139,7 @@
 		}return function (Constructor, protoProps, staticProps) {
 			if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
 		};
-	}(); //import getClinics from './clinics_data.js';
+	}(); //import getClinics from './data.js';
 
 	var _clinics_helper = __webpack_require__(159);
 

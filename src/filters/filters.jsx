@@ -2,7 +2,7 @@ require("./filters.css");
 import React from 'react';
 import FilterCheckbox from './filter_checkbox.jsx';
 import FilterRadio from './filter_radio.jsx';
-import { clinicsModel } from '../models/clinics_helper.js';
+import { clinicsModel } from '../models/clinics/clinics.js';
 import YMaps from '../map/ymaps.js';
 
 
