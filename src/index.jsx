@@ -3,7 +3,7 @@ require("./index.css");
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { filterClinics, availableFilters, activeFilters } from './clinics_helper.js';
-import Map from './map.jsx';
+import Map from './map/map.jsx';
 import Filters from './filters/filters.jsx';
 import ClinicsList from './clinics_list/clinics_list.jsx';
 
