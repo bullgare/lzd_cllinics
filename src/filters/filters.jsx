@@ -3,7 +3,7 @@ import React from 'react';
 import FilterCheckbox from './filter_checkbox.jsx';
 import FilterRadio from './filter_radio.jsx';
 import { availableFilters, activeFilters } from '../clinics_helper.js';
-import updateClinics from '../clinics_ymaps'
+import YMaps from '../ymaps.js'
 
 
 class Filters extends React.Component {
@@ -25,7 +25,7 @@ class Filters extends React.Component {
 
 	updateClinicsList() {
 		this.setState({filters: availableFilters.getFilters()});
-		updateClinics();
+		YMaps.updateMarkers();
 
 		if (this.props.onChange) {
 			this.props.onChange();

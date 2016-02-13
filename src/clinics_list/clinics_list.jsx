@@ -1,6 +1,6 @@
 require("./clinics_list.css");
 import React from 'react';
-import { openBalloonById } from '../clinics_ymaps.js';
+import YMaps from '../ymaps.js';
 
 
 class ClinicsList extends React.Component {
@@ -9,7 +9,7 @@ class ClinicsList extends React.Component {
 	}
 
 	openBalloon(id) {
-		openBalloonById(id);
+		YMaps.openBalloonById(id);
 	}
 
 	render() {

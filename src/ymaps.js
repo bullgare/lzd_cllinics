@@ -8,12 +8,11 @@ let myMap;
 function init () {
 	myMap = new ymaps.Map("map", {
 		center: [55.76, 37.64],
-		zoom: 10
-	}, {
-		searchControlProvider: 'yandex#search'
+		zoom: 10,
+		controls: ["zoomControl", "typeSelector", "fullscreenControl", "rulerControl"]
 	});
 
-	updateClinics();
+	YMaps.updateMarkers();
 }
 
 let placemarksByIds = {};
@@ -72,19 +71,18 @@ function addObjects(clinics) {
 	}
 }
 
-function updateClinics() {
-	addObjects(filterClinics(activeFilters.getFilters()));
-}
+export default class YMaps {
+	static updateMarkers() {
+		addObjects(filterClinics(activeFilters.getFilters()));
+	}
 
-export function openBalloonById(id) {
-	if (placemarksByIds[id]) {
-		let balloon = placemarksByIds[id].balloon;
-		if (balloon.isOpen()) {
-			balloon.close()
+	static openBalloonById(id) {
+		if (placemarksByIds[id]) {
+			let balloon = placemarksByIds[id].balloon;
+			if (balloon.isOpen()) {
+				balloon.close()
+			}
+			else balloon.open();
 		}
-		else balloon.open();
 	}
 }
-
-export default updateClinics;
-//export openBalloonById;

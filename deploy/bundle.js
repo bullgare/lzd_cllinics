@@ -144,7 +144,12 @@
 							_react2.default.createElement(
 								"h4",
 								null,
-								"Клиники"
+								"Клиники ",
+								_react2.default.createElement(
+									"span",
+									{ className: "badge" },
+									this.state.clinics.length
+								)
 							),
 							_react2.default.createElement(_clinics_list2.default, { clinics: this.state.clinics })
 						)
@@ -20457,8 +20462,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./map.css", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./map.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./map.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./map.css");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -20819,9 +20824,9 @@
 
 	var _clinics_helper = __webpack_require__(159);
 
-	var _clinics_ymaps = __webpack_require__(170);
+	var _ymaps = __webpack_require__(170);
 
-	var _clinics_ymaps2 = _interopRequireDefault(_clinics_ymaps);
+	var _ymaps2 = _interopRequireDefault(_ymaps);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -20864,7 +20869,7 @@
 			key: 'updateClinicsList',
 			value: function updateClinicsList() {
 				this.setState({ filters: _clinics_helper.availableFilters.getFilters() });
-				(0, _clinics_ymaps2.default)();
+				_ymaps2.default.updateMarkers();
 
 				if (this.props.onChange) {
 					this.props.onChange();
@@ -21120,28 +21125,42 @@
 
 	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
-	exports.openBalloonById = openBalloonById;
+
+	var _createClass = function () {
+		function defineProperties(target, props) {
+			for (var i = 0; i < props.length; i++) {
+				var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
+			}
+		}return function (Constructor, protoProps, staticProps) {
+			if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
+		};
+	}(); //import getClinics from './clinics_data.js';
 
 	var _clinics_helper = __webpack_require__(159);
 
-	ymaps.ready(init); //import getClinics from './clinics_data.js';
+	function _classCallCheck(instance, Constructor) {
+		if (!(instance instanceof Constructor)) {
+			throw new TypeError("Cannot call a class as a function");
+		}
+	}
+
+	ymaps.ready(init);
 
 	var myMap = undefined;
 
 	function init() {
 		myMap = new ymaps.Map("map", {
 			center: [55.76, 37.64],
-			zoom: 10
-		}, {
-			searchControlProvider: 'yandex#search'
+			zoom: 10,
+			controls: ["zoomControl", "typeSelector", "fullscreenControl", "rulerControl"]
 		});
 
-		updateClinics();
+		YMaps.updateMarkers();
 	}
 
 	var placemarksByIds = {};
@@ -21201,23 +21220,34 @@
 		}
 	}
 
-	function updateClinics() {
-		addObjects((0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()));
-	}
-
-	function openBalloonById(id) {
-		if (placemarksByIds[id]) {
-			var balloon = placemarksByIds[id].balloon;
-			if (balloon.isOpen()) {
-				balloon.close();
-			} else balloon.open();
+	var YMaps = function () {
+		function YMaps() {
+			_classCallCheck(this, YMaps);
 		}
-	}
 
-	exports.default = updateClinics;
-	//export openBalloonById;
+		_createClass(YMaps, null, [{
+			key: "updateMarkers",
+			value: function updateMarkers() {
+				addObjects((0, _clinics_helper.filterClinics)(_clinics_helper.activeFilters.getFilters()));
+			}
+		}, {
+			key: "openBalloonById",
+			value: function openBalloonById(id) {
+				if (placemarksByIds[id]) {
+					var balloon = placemarksByIds[id].balloon;
+					if (balloon.isOpen()) {
+						balloon.close();
+					} else balloon.open();
+				}
+			}
+		}]);
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_ymaps.js" + ": " + err.message); } }); } } })(); }
+		return YMaps;
+	}();
+
+	exports.default = YMaps;
+
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ymaps.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 171 */
@@ -21277,7 +21307,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _clinics_ymaps = __webpack_require__(170);
+	var _ymaps = __webpack_require__(170);
+
+	var _ymaps2 = _interopRequireDefault(_ymaps);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21301,7 +21333,7 @@
 		_createClass(ClinicsList, [{
 			key: 'openBalloon',
 			value: function openBalloon(id) {
-				(0, _clinics_ymaps.openBalloonById)(id);
+				_ymaps2.default.openBalloonById(id);
 			}
 		}, {
 			key: 'render',
@@ -21313,7 +21345,7 @@
 					null,
 					_react2.default.createElement(
 						'ul',
-						{ className: 'list-group' },
+						{ className: 'list-group btn-group-vertical' },
 						this.props.clinics.map(function (clinic, i) {
 							return _react2.default.createElement(
 								'li',
