@@ -36,7 +36,7 @@ export class App extends React.Component {
 						<Filters onChange={this.onFiltersChange.bind(this)}/>
 					</div>
 					<div className="col-sm-8 col-xs-12">
-						<h4>Клиники</h4>
+						<h4>Клиники <span className="badge">{this.state.clinics.length}</span></h4>
 						<ClinicsList clinics={this.state.clinics}/>
 					</div>
 				</div>
