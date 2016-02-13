@@ -78,7 +78,11 @@ function updateClinics() {
 
 export function openBalloonById(id) {
 	if (placemarksByIds[id]) {
-		placemarksByIds[id].balloon.open();
+		let balloon = placemarksByIds[id].balloon;
+		if (balloon.isOpen()) {
+			balloon.close()
+		}
+		else balloon.open();
 	}
 }
 
