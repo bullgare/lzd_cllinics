@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/bullgare/lzd_cllinics/issues"
   },
-  "homepage": "TODO",
+  "homepage": "http://bullgare.github.io/lzd_cllinics/",
   "dependencies": {
     "bootstrap": "3.3.5",
     "node-libs-browser": "1.0.0",
