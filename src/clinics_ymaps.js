@@ -1,0 +1,75 @@
+//import getClinics from './clinics_data.js';
+import { activeFilters, filterClinics } from './clinics_helper.js';
+
+ymaps.ready(init);
+
+let myMap;
+
+function init () {
+	myMap = new ymaps.Map("map", {
+		center: [55.76, 37.64],
+		zoom: 10
+	}, {
+		searchControlProvider: 'yandex#search'
+	});
+
+	updateClinics();
+}
+
+function addObjects(clinics) {
+	let mapObjects = myMap.geoObjects;
+	mapObjects.removeAll();
+
+	clinics.forEach(function (obj) {addObject(obj);});
+
+	function addObject(obj) {
+		let color = '#a5260a';
+		if (obj.dental) {
+			color = '#0095b6';
+		}
+		else if (! obj.home) {
+			color = '#735184';
+		}
+
+		let services  =[];
+		if (obj.dental) {
+			services.push('стоматология');
+		}
+		if (obj.home) {
+			services.push('вызов врача');
+		}
+
+		let content = '';
+		if (obj.name) {
+			content += '<h2>' + obj.name + '</h2>\n';
+		}
+		if (obj.address) {
+			content += '<h3>' + obj.address + '</h3>\n';
+		}
+
+		content += '<dl>';
+		if (obj.phones) {
+			content += '<dt>Телефоны</dt><dd>' + obj.phones + '</dd>\n';
+		}
+		if (obj.hours) {
+			content += '<dt>Режим</dt><dd>' + obj.hours + '</dd>\n';
+		}
+		if (services.length) {
+			content += '<dt>Услуги</dt><dd>' + services.join(', ') + '</dd>\n';
+		}
+		content += '</dl>';
+
+		mapObjects.add(new ymaps.Placemark(obj.coords, {
+			balloonContent: content
+		}, {
+			preset: 'islands#dotIcon',
+			iconColor: color
+		}))
+	}
+}
+
+function updateClinics() {
+	addObjects(filterClinics(activeFilters.getFilters()));
+}
+
+export default updateClinics;

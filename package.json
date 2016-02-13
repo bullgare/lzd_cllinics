@@ -1,0 +1,40 @@
+{
+  "name": "lzd-clinics",
+  "version": "0.0.1",
+  "description": "lzd clinics",
+  "main": "''",
+  "scripts": {
+    "build": "webpack --progress --profile --colors",
+    "dev": "webpack-dev-server --progress --profile --colors --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bullgare/lzd_cllinics.git"
+  },
+  "keywords": [],
+  "author": "bullgare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bullgare/lzd_cllinics/issues"
+  },
+  "homepage": "TODO",
+  "dependencies": {
+    "bootstrap": "3.3.5",
+    "node-libs-browser": "1.0.0",
+    "react": "0.14.7",
+    "react-dom": "0.14.6"
+  },
+  "devDependencies": {
+    "babel-core": "6.5.1",
+    "babel-loader": "6.2.2",
+    "babel-preset-es2015": "6.5.0",
+    "babel-preset-react": "6.3.13",
+    "css-loader": "0.23.1",
+    "file-loader": "0.8.4",
+    "react-hot-loader": "1.2.7",
+    "style-loader": "0.13.0",
+    "url-loader": "0.5.6",
+    "webpack": "1.12.13",
+    "webpack-dev-server": "1.14.1"
+  }
+}
