@@ -35,12 +35,10 @@ class Filters extends React.Component {
 	render() {
 		return (
 			<div>
-				<div>Фильтры</div>
-
 				<ul className="filters">
 					{this.state.filters.map((filter, i) => {
 						if (filter.type === 'checkbox') {
-							return <li key={filter.key}>
+							return <li className="checkbox" key={filter.key}>
 								<FilterCheckbox
 									filter={filter}
 									whenChanged={this.onFilterChange.bind(this)}
@@ -48,7 +46,7 @@ class Filters extends React.Component {
 							</li>;
 						}
 						else if (filter.type === 'radio') {
-							return <li key={filter.key + filter.value}>
+							return <li className="radio" key={filter.key + filter.value}>
 								<FilterRadio
 									filter={filter}
 									whenChanged={this.onFilterChange.bind(this)}
@@ -57,7 +55,10 @@ class Filters extends React.Component {
 						}
 					})}
 					<li>
-						<button onClick={this.onFiltersReset.bind(this)}>Сбросить все фильтры</button>
+						<button
+							onClick={this.onFiltersReset.bind(this)}
+							className="btn btn-default"
+						>Сбросить все фильтры</button>
 					</li>
 				</ul>
 			</div>

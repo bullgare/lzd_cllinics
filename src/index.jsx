@@ -24,10 +24,22 @@ export class App extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<Map/>
-				<Filters onChange={this.onFiltersChange.bind(this)}/>
-				<ClinicsList clinics={this.state.clinics}/>
+			<div className="container-fluid">
+				<div className="row">
+					<div className="col-xs-12">
+						<Map/>
+					</div>
+				</div>
+				<div className="row">
+					<div className="col-sm-4 col-xs-12">
+						<h4>Фильтры</h4>
+						<Filters onChange={this.onFiltersChange.bind(this)}/>
+					</div>
+					<div className="col-sm-8 col-xs-12">
+						<h4>Клиники</h4>
+						<ClinicsList clinics={this.state.clinics}/>
+					</div>
+				</div>
 			</div>
 		);
 	}

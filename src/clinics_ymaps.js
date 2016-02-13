@@ -44,10 +44,10 @@ function addObjects(clinics) {
 			content += '<h2>' + obj.name + '</h2>\n';
 		}
 		if (obj.address) {
-			content += '<h3>' + obj.address + '</h3>\n';
+			content += '<h4>' + obj.address + '</h4>\n';
 		}
 
-		content += '<dl>';
+		content += '<dl class="dl-horizontal">';
 		if (obj.phones) {
 			content += '<dt>Телефоны</dt><dd>' + obj.phones + '</dd>\n';
 		}

@@ -1,5 +1,10 @@
 .wrapper {
 	margin: 0 auto;
 	width: 90vw;
-	min-width: 800px;
+}
+
+@media (max-width: 992px) {
+	.wrapper {
+		width: 100vw;
+	}
 }

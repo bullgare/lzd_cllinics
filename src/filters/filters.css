@@ -5,7 +5,3 @@ ul.filters {
 ul.filters > li {
 	list-style: none;
 }
-
-ul.filters input[type=radio], ul.filters input[type=checkbox] {
-	margin-right: 5px;
-}
