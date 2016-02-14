@@ -19894,21 +19894,21 @@
 		}
 
 		_createClass(AvailableFilters, [{
-			key: 'getFilters',
-			value: function getFilters() {
+			key: 'getFilterSets',
+			value: function getFilterSets() {
 				var _this2 = this;
 
-				var filters = [];
+				var filterSets = [{ title: 'Параметры', filters: [] }, { title: 'Сеть клиник', filters: [] }];
 				var chains = getChains();
 
-				filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
-				filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
+				filterSets[0].filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
+				filterSets[0].filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
 
 				chains.forEach(function (chain) {
-					filters.push(_this2._generateFilter('chain', chain.value, 'radio', chain.label));
+					filterSets[1].filters.push(_this2._generateFilter('chain', chain.value, 'radio', chain.label));
 				});
 
-				return filters;
+				return filterSets;
 			}
 		}, {
 			key: '_generateFilter',
@@ -20871,7 +20871,7 @@
 
 			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Filters).call(this, props));
 
-			_this.state = { filters: _clinics.clinicsModel.availableFilters.getFilters() };
+			_this.state = { filterSets: _clinics.clinicsModel.availableFilters.getFilterSets() };
 			return _this;
 		}
 
@@ -20891,7 +20891,7 @@
 		}, {
 			key: 'updateClinicsList',
 			value: function updateClinicsList() {
-				this.setState({ filters: _clinics.clinicsModel.availableFilters.getFilters() });
+				this.setState({ filterSets: _clinics.clinicsModel.availableFilters.getFilterSets() });
 				_ymaps2.default.updateMarkers();
 
 				if (this.props.onChange) {
@@ -20907,31 +20907,46 @@
 					'div',
 					null,
 					_react2.default.createElement(
-						'ul',
-						{ className: 'filters' },
-						this.state.filters.map(function (filter, i) {
-							if (filter.type === 'checkbox') {
-								return _react2.default.createElement(
-									'li',
-									{ className: 'checkbox', key: filter.key },
-									_react2.default.createElement(_filter_checkbox2.default, {
-										filter: filter,
-										whenChanged: _this2.onFilterChange.bind(_this2)
+						'div',
+						{ className: 'filter-sets' },
+						this.state.filterSets.map(function (filterSet, i) {
+							return _react2.default.createElement(
+								'div',
+								{ key: i },
+								_react2.default.createElement(
+									'div',
+									null,
+									filterSet.title
+								),
+								_react2.default.createElement(
+									'ul',
+									{ className: 'filters' },
+									filterSet.filters.map(function (filter) {
+										if (filter.type === 'checkbox') {
+											return _react2.default.createElement(
+												'li',
+												{ className: 'checkbox', key: filter.key },
+												_react2.default.createElement(_filter_checkbox2.default, {
+													filter: filter,
+													whenChanged: _this2.onFilterChange.bind(_this2)
+												})
+											);
+										} else if (filter.type === 'radio') {
+											return _react2.default.createElement(
+												'li',
+												{ className: 'radio', key: filter.key + filter.value },
+												_react2.default.createElement(_filter_radio2.default, {
+													filter: filter,
+													whenChanged: _this2.onFilterChange.bind(_this2)
+												})
+											);
+										}
 									})
-								);
-							} else if (filter.type === 'radio') {
-								return _react2.default.createElement(
-									'li',
-									{ className: 'radio', key: filter.key + filter.value },
-									_react2.default.createElement(_filter_radio2.default, {
-										filter: filter,
-										whenChanged: _this2.onFilterChange.bind(_this2)
-									})
-								);
-							}
+								)
+							);
 						}),
 						_react2.default.createElement(
-							'li',
+							'div',
 							null,
 							_react2.default.createElement(
 								'button',
