@@ -10,6 +10,11 @@ With help of [react-webpack-babel](https://github.com/alicoding/react-webpack-ba
 
 Wanna participate? Make pull requests.
 
+### Data
+
+Data is located on
+> src/models/clinics/data.js
+
 ### Develop
 
 First install webpack
