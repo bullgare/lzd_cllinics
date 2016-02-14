@@ -1,10 +1,15 @@
 .wrapper {
 	margin: 0 auto;
 	width: 90vw;
+	display: block !important;
 }
 
 @media (max-width: 992px) {
 	.wrapper {
 		width: 100vw;
 	}
+}
+
+.preloader {
+	display: none !important;
 }

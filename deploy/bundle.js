@@ -21598,7 +21598,7 @@
 
 
 	// module
-	exports.push([module.id, ".wrapper {\n\tmargin: 0 auto;\n\twidth: 90vw;\n}\n\n@media (max-width: 992px) {\n\t.wrapper {\n\t\twidth: 100vw;\n\t}\n}", ""]);
+	exports.push([module.id, ".wrapper {\n\tmargin: 0 auto;\n\twidth: 90vw;\n\tdisplay: block !important;\n}\n\n@media (max-width: 992px) {\n\t.wrapper {\n\t\twidth: 100vw;\n\t}\n}\n\n.preloader {\n\tdisplay: none !important;\n}", ""]);
 
 	// exports
 
