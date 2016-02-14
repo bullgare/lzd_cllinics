@@ -12,7 +12,7 @@ Wanna participate? Make pull requests.
 
 ### Data
 
-Data is located on
+Data is located at
 > src/models/clinics/data.js
 
 ### Develop
