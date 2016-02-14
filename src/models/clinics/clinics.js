@@ -73,18 +73,21 @@ class AvailableFilters {
 		this.activeFilters = activeFilters;
 	}
 
-	getFilters() {
-		let filters = [];
+	getFilterSets() {
+		let filterSets = [
+			{title: 'Параметры', filters: []},
+			{title: 'Сеть клиник', filters: []}
+		];
 		let chains = getChains();
 
-		filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
-		filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
+		filterSets[0].filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
+		filterSets[0].filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
 
 		chains.forEach((chain) => {
-			filters.push(this._generateFilter('chain', chain.value, 'radio', chain.label));
+			filterSets[1].filters.push(this._generateFilter('chain', chain.value, 'radio', chain.label));
 		});
 
-		return filters;
+		return filterSets;
 	}
 
 	_generateFilter(key, value, type, label = value) {

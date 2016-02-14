@@ -9,7 +9,7 @@ import YMaps from '../map/ymaps.js';
 class Filters extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {filters: clinicsModel.availableFilters.getFilters()};
+		this.state = {filterSets: clinicsModel.availableFilters.getFilterSets()};
 	}
 
 	onFilterChange(newFilterState) {
@@ -24,7 +24,7 @@ class Filters extends React.Component {
 	}
 
 	updateClinicsList() {
-		this.setState({filters: clinicsModel.availableFilters.getFilters()});
+		this.setState({filterSets: clinicsModel.availableFilters.getFilterSets()});
 		YMaps.updateMarkers();
 
 		if (this.props.onChange) {
@@ -35,32 +35,41 @@ class Filters extends React.Component {
 	render() {
 		return (
 			<div>
-				<ul className="filters">
-					{this.state.filters.map((filter, i) => {
-						if (filter.type === 'checkbox') {
-							return <li className="checkbox" key={filter.key}>
-								<FilterCheckbox
-									filter={filter}
-									whenChanged={this.onFilterChange.bind(this)}
-								/>
-							</li>;
-						}
-						else if (filter.type === 'radio') {
-							return <li className="radio" key={filter.key + filter.value}>
-								<FilterRadio
-									filter={filter}
-									whenChanged={this.onFilterChange.bind(this)}
-								/>
-							</li>;
-						}
+				<div className="filter-sets">
+					{this.state.filterSets.map((filterSet, i) => {
+						return <div key={i}>
+							<div>{filterSet.title}</div>
+
+							<ul className="filters">
+								{filterSet.filters.map((filter) => {
+									if (filter.type === 'checkbox') {
+										return <li className="checkbox" key={filter.key}>
+											<FilterCheckbox
+												filter={filter}
+												whenChanged={this.onFilterChange.bind(this)}
+											/>
+										</li>;
+									}
+									else if (filter.type === 'radio') {
+										return <li className="radio" key={filter.key + filter.value}>
+											<FilterRadio
+												filter={filter}
+												whenChanged={this.onFilterChange.bind(this)}
+											/>
+										</li>;
+									}
+								})}
+							</ul>
+						</div>;
 					})}
-					<li>
+
+					<div>
 						<button
 							onClick={this.onFiltersReset.bind(this)}
 							className="btn btn-default"
 						>Сбросить все фильтры</button>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		);
 	}
