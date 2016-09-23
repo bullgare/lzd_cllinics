@@ -17,6 +17,14 @@ class ClinicsList extends React.Component {
 			<div>
 				<ul className="list-group btn-group-vertical">
 					{this.props.clinics.map((clinic, i) => {
+						var phones = clinic.phones;
+						if (clinic.home && clinic.phones_home.length) {
+							phones += "; вызов: " + clinic.phones_home;
+						}
+						if (clinic.dental &&clinic.phones_dental.length) {
+							phones += "; стоматология: " + clinic.phones_dental;
+						}
+
 						return <li
 								className="clinics-list list-group-item btn"
 								onClick={this.openBalloon.bind(this, clinic.id)}
@@ -28,7 +36,7 @@ class ClinicsList extends React.Component {
 							<div className="list-group-item-text">
 								<div>{clinic.address}</div>
 								<div>{clinic.hours}</div>
-								<div>{clinic.phones}</div>
+								<div>{phones}</div>
 							</div>
 						</li>;
 					})}
