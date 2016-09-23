@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -163,7 +163,7 @@
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector("#app"));
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 1 */
@@ -19770,7 +19770,7 @@
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -19903,6 +19903,7 @@
 
 				filterSets[0].filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
 				filterSets[0].filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
+				filterSets[0].filters.push(this._generateFilter('hospital', true, 'checkbox', 'Стационар'));
 
 				chains.forEach(function (chain) {
 					filterSets[1].filters.push(_this2._generateFilter('chain', chain.value, 'radio', chain.label));
@@ -19973,456 +19974,1992 @@
 
 	var clinicsModel = exports.clinicsModel = new ClinicsModel();
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
-	'use strict';
+	"use strict";
 
 	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 	function getClinics() {
 		return [{
-			id: 1,
-			name: 'ОАО Поликлиника "Медросконтракт"',
-			address: 'ул.Международная, д.19',
-			chain: '',
-			coords: [55.744500277279364, 37.68802750000002],
-			home: true,
-			dental: true,
-			hours: 'пн. - пт. 08:00 - 20:00, сб. - 09:00 - 15:00, вс. – выходной.',
-			phones: 'Тел.: (495) 678-9001, (495) 671-5072 (73), вызов врача на дом: (495) 911-4706'
+			"id": 0,
+			"name": "ООО \"ПРОГРЕСС-МЕД\"",
+			"address": "Москва г, Селезневская ул, д.32",
+			"chain": "",
+			"coords": [55.7809137, 37.6118058],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 781-90-01",
+			"phones_home": "(495) 781-06-81, ( 916) 058-17-75",
+			"phones_dental": "",
+			"position": "1.1"
 		}, {
-			id: 2,
-			name: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			address: 'Сущевский Вал, д.12;',
-			chain: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			coords: [55.79196127705299, 37.59983949999994],
-			home: true,
-			dental: true,
-			hours: 'ПН - ВС с 8.00 до 21.00',
-			phones: '7 (495) 782-88-82; +7 (496) 663-0303.'
+			"id": 2,
+			"name": "АО \"ЦБЭЛИС\"",
+			"address": "Московская обл, Жуковский г, Дзержинскогоул, д.16",
+			"chain": "",
+			"coords": [55.59615, 38.128632],
+			"home": false,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 556-84-53",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "3.1"
 		}, {
-			id: 3,
-			name: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			address: 'Последний пер., д.28',
-			chain: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			coords: [55.769696777121624, 37.63065149999999],
-			home: true,
-			dental: true,
-			hours: 'Режим работы: пн-вс. 08.00 – 21.00 Вызов врача на дом: пн. – пт. 08.00 - 14.00, сб. 08.00 -12.00, вс.-выходной.',
-			phones: 'Регистратура: 782-88-82. Вызов врача на дом:782-88-82.'
+			"id": 3,
+			"name": "НУЗ \"НКЦ ОАО \"РЖД\"",
+			"address": "Москва г, Часовая ул, д.20",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.810649, 37.529569],
+			"home": false,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)531-30-48,925-02-29-запись",
+			"phones_home": "",
+			"phones_dental": " (495)531-30-48",
+			"position": "3.2"
 		}, {
-			id: 4,
-			name: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			address: 'Комсомольский пр-т, д.28',
-			chain: 'Сеть клиник "Будь Здоров" / ООО "Клиника ЛМС"',
-			coords: [55.726877277336065, 37.57964549999999],
-			home: true,
-			dental: true,
-			hours: 'пн-вс. 08.00 – 21.00',
-			phones: '7 (495) 782-8882, +7 (495) 663-0303'
+			"id": 4,
+			"name": "НУЗ \"НКЦ ОАО \"РЖД\"",
+			"address": "Москва г, Волоколамское ш, д.84",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.820136, 37.456086],
+			"home": false,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-02-02/02-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "3.3"
 		}, {
-			id: 5,
-			name: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			address: 'Манежная пл., д. 1, стр. 2',
-			chain: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			coords: [55.75577327715694, 37.61460749999996],
-			home: true,
-			dental: true,
-			hours: '?Режим работы: пн.-вс. 8.00-21.00, сб.-вс.',
-			phones: '?Регистратура: 232-48-40'
+			"id": 5,
+			"name": "КЛИНИКА МЕДСИ В СТУПИНО (АО \"Группа компаний\"Медси\")",
+			"address": "Московская обл, Ступинский р-н, Ступино г,Андропова ул, д.64",
+			"chain": "МЕДСИ",
+			"coords": [54.8879353, 38.0641583],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(496) 642-27-45. (496) 642-37-67",
+			"phones_home": "(496) 642-27-45",
+			"phones_dental": "",
+			"position": "4.1"
 		}, {
-			id: 6,
-			name: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			address: 'Большой Головин пер., д.4',
-			chain: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			coords: [55.7692052771763, 37.62660050000001],
-			home: true,
-			dental: true,
-			hours: '?Режим работы: пн.-вс. 8.00-21.00, сб.-вс.',
-			phones: '?Регистратура: 232-48-40'
+			"id": 7,
+			"name": "ЗАО \"ЦЕНТРАЛЬНАЯ ПОЛИКЛИНИКА ЛИТФОНДА\"",
+			"address": "Москва г, Аэропортовская 1-я ул, д.5",
+			"chain": "",
+			"coords": [55.801462, 37.535571],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(095)151-02-11;(495) 708-10-25; дляэкстр. случаев: 8-903-019-53-32",
+			"phones_home": "(499) 155-86-13 - с 8 до 14 часовбудни",
+			"phones_dental": " 8499-151-09-94, 8499-151-96-40",
+			"position": "5.1"
 		}, {
-			id: 7,
-			name: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			address: 'Товарищеский пер., д.10, стр. 2',
-			chain: 'Сеть клиник Креде Эксперто/ЗАО «КСМТ»',
-			coords: [55.742113277254674, 37.66262249999995],
-			home: true,
-			dental: true,
-			hours: 'Режим работы: пн.-вс. 8.00-21.00, сб.-вс.',
-			phones: 'Регистратура: 232-48-40'
+			"id": 8,
+			"name": "АО \"Группа компаний \"Медси\" на Благовещенском",
+			"address": "Москва г, Благовещенский пер, д.6, корп.2",
+			"chain": "МЕДСИ",
+			"coords": [55.766454, 37.597011],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "495-7-800-500; 495-223-70-56",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.2"
 		}, {
-			id: 8,
-			name: 'ГЛПУ "Поликлиника No 2 Минэкономразвития России".',
-			address: 'Ломоносовский пр-т, д.43',
-			chain: '',
-			coords: [55.708800277388086, 37.50749249999993],
-			home: true,
-			hours: 'Режим работы: пн. - пт. 08.00-20.00, сб. - 09.00-15.00, вс- выходной. Вызов врача на дом: пн. – пт. 09.00 до 14.00.',
-			phones: 'Регистратура: 499- 783-03-03; (499)143-61-65; (499)143-61-77, справочная: (499)143-61-88. Вызов врача на дом: (499)143-61-55.'
+			"id": 9,
+			"name": "АО \"Группа компаний \"Медси\" на Солянке",
+			"address": "Москва г, Солянка ул, д.12, корп.1",
+			"chain": "МЕДСИ",
+			"coords": [55.751964, 37.638212],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "495-7-800-500 (495)-623-16-63, (495)-625-58-02",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.3"
 		}, {
-			id: 9,
-			name: 'КДЦ МЕДСИ на Белорусской',
-			address: 'Грузинский пер., д.3, корп.2',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.77141327707963, 37.58039150000001],
-			home: true,
-			hours: 'Режим работы: пн. - пт. 08.00 -21.00, сб. 09.00 - 20.00, вс. 09.00-18.00. Вызов врача на дом: пн. – пт. 08.00 -13.00.',
-			phones: 'Тел.: (495) 7-800-500 (call-центр).'
+			"id": 10,
+			"name": "\"Медси\" НА ПРЕЧИСТЕНКЕ",
+			"address": "Москва г, Пречистенка ул, д.39",
+			"chain": "МЕДСИ",
+			"coords": [55.7387188, 37.5870253],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)228-08-03 495 7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.4"
 		}, {
-			id: 10,
-			name: 'ЗАО «Лечебный Центр»',
-			address: 'ул.Тимура Фрунзе, д.15/1',
-			chain: '',
-			coords: [55.73680227731924, 37.584864500000016],
-			home: true,
-			hours: 'Режим работы: пн.- вс. 08.00-21.00. Вызов врача на дом: пн. – пт. 08.00-17.00, сб. - 08.00-15.00, вс. - 09.00-13.00.',
-			phones: 'Регистратура: 786-45-25. Вызов врача на дом: 786-45-21'
+			"id": 11,
+			"name": "КЛИНИКА \"МЕДСИ\" НА ЛЕНИНГРАДКЕ (АО \"Группакомпаний \"Медси\")",
+			"address": "Москва г, Ленинградский пр-кт, д.52",
+			"chain": "МЕДСИ",
+			"coords": [55.797278, 37.540931],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 228-08-03 7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.5"
 		}, {
-			id: 11,
-			name: 'ФГБУ "9 ЛДЦ" Минобороны России',
-			address: 'Комсомольский пр-т, д.13А',
-			chain: '',
-			coords: [55.72943227724307, 37.590020999999986],
-			home: true,
-			hours: 'Режимработы: пн.- пт. 08.00-20.00, суб, вс. - выходной.',
-			phones: 'тел.: (495) 609-5420; (495) 609-5421 (многоканальные); вызов врача на дом: (495) 609-5310'
+			"id": 12,
+			"name": "АО \"Группа компаний \"Медси\" на Дубининской",
+			"address": "Москва г, Дубининская ул, д.57",
+			"chain": "МЕДСИ",
+			"coords": [55.7205657, 37.63549],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "8-495-780-05-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.6"
 		}, {
-			id: 12,
-			name: 'Филиал No 6 ФГБУ "3 ЦВКГ им. А.А. Вишневского Минобороны России" (52 КДЦ)',
-			address: 'Планетная ул., д. 3, корп. 3',
-			chain: '',
-			coords: [55.79786227699447, 37.54965949999997],
-			home: true,
-			hours: 'Режим работы: пн-пт 08.00-20.00, сб., вс. - выходной. Вызов врача на дом: пн. – пт. 08.00-11.00.',
-			phones: 'Регистратура: (495) 612-81-04.'
+			"id": 13,
+			"name": "КЛИНИКА \"МЕДСИ\" В МАРЬИНО (АО \"Группакомпаний \"Медси\")",
+			"address": "Москва г, Маршала Голованова ул, д.1,корп.2",
+			"chain": "МЕДСИ",
+			"coords": [55.6503366, 37.7311747],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 228-08-03 495 7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.7"
 		}, {
-			id: 13,
-			name: 'НУЗ "ЦКБ No1" ОАО "РЖД"',
-			address: 'ул. Часовая, д. 20 (?Волоколамское шоссе, д .84?)',
-			chain: '',
-			coords: [55.820100776925464, 37.45618999999991],
-			home: true,
-			hours: '9.00-19.00, воскр.- выходной.',
-			phones: '(495)925-02-02 (многоканальный тел. поликлиники)'
+			"id": 14,
+			"name": "КЛИНИКА \"МЕДСИ\" В МИТИНО (АО \"Группакомпаний \"Медси\")",
+			"address": "Москва г, Пятницкое ш, д.37",
+			"chain": "МЕДСИ",
+			"coords": [55.854126, 37.3576851],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": ". (495) 223-52-06. (495) 794-73-08495-7-800-500",
+			"phones_home": "",
+			"phones_dental": " 751-03-29,794-73-08",
+			"position": "5.8"
 		}, {
-			id: 14,
-			name: 'Сеть клиник Семейная',
-			address: 'Хорошевское шоссе, д. 80',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.77851177709325, 37.522881],
-			home: true,
-			hours: 'Режим работы: пн.- вс. 09.00-21.00',
-			phones: 'Тел.: (499) 195-41-90, (499) 195-89-27'
+			"id": 15,
+			"name": "КЛИНИКА \"МЕДСИ\" НА ПОЛЯНКЕ ( АО \"Группакомпаний \"Медси\")",
+			"address": "Москва г, Полянка М. ул, д.7, корп.1",
+			"chain": "МЕДСИ",
+			"coords": [55.7348521, 37.6173649],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 228-08-03 495-7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.9"
 		}, {
-			id: 15,
-			name: 'Сеть клиник Семейная',
-			address: 'Университетский пр-т, д. 4',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.697066777445905, 37.553810000000006],
-			home: true,
-			hours: 'Режим работы: с 9-00 до 21-00',
-			phones: 'Тел.: (499) 137-00-60, (499) 137-77-71'
+			"id": 17,
+			"name": "КЛИНИКА \"МЕДСИ\" НА ДЕРБЕНЕВСКОЙ (АО\"Группа компаний \"Медси\")",
+			"address": "Москва г, Дербеневская наб, д.7",
+			"chain": "МЕДСИ",
+			"coords": [55.7233429, 37.6555163],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)-228-08-03 495-7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.11"
 		}, {
-			id: 16,
-			name: 'Сеть клиник Семейная',
-			address: 'ул. Сергия Радонежского, д. 5/2, стр.1',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.74742377724984, 37.67414849999998],
-			home: true,
-			hours: 'Режим работы: пн. – вс. 09.00-21.00',
-			phones: 'Тел.: (495) 678-04-10'
+			"id": 18,
+			"name": "КЛИНИКА \"МЕДСИ\" В БУТОВО (АО \"Группакомпаний \"Медси\")",
+			"address": "Москва г, Старокачаловская ул, д.3",
+			"chain": "МЕДСИ",
+			"coords": [55.5697793, 37.5838553],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 780-05-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "5.12"
 		}, {
-			id: 17,
-			name: 'Сеть клиник Семейная',
-			address: 'Б.Серпуховская, д. 30, стр.1',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.72544227732126, 37.625405500000014],
-			home: true,
-			hours: '',
-			phones: ''
+			"id": 19,
+			"name": "Филиал No 2 ФБУЗ \"Лечебно-реабилитационныйцентр Минэкономразвития России\"",
+			"address": "Москва г, Ломоносовский пр-кт, д.43",
+			"chain": "",
+			"coords": [55.7088646, 37.5074622],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)783-03-03; (499)143-61-88(справочная)",
+			"phones_home": "(499) 143-61-55",
+			"phones_dental": " 8499-143-14-78/64-87/61-76/61-77",
+			"position": "5.13"
 		}, {
-			id: 18,
-			name: 'Сеть клиник Семейная',
-			address: 'ул. Героев Панфиловцев, д. 1',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.853132276848335, 37.437954499999975],
-			home: true,
-			hours: 'Режим работы: пн.-сб. 09.00-21.00, вс. 09.00-18.00',
-			phones: 'Регистратура: (495) 496-60-12'
+			"id": 20,
+			"name": "ООО \"Медицина АльфаСтрахования\" (ООО\"МедАС\"-обособленное подразделение \"Альфа - ЦентрЗдоровья\")",
+			"address": "Москва г, Комсомольский пр-кт, д.17,корп.11",
+			"chain": "",
+			"coords": [55.728128, 37.5861581],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 663-84-00/86-00",
+			"phones_home": "(495) 663-86-00",
+			"phones_dental": " (495) 663-84-00/86-00",
+			"position": "6.1"
 		}, {
-			id: 19,
-			name: 'Сеть клиник Семейная',
-			address: 'Каширское шоссе, д. 56, корп.1',
-			chain: 'Сеть клиник Семейная',
-			coords: [55.64554777762947, 37.67071649999999],
-			home: true,
-			hours: 'Режим работы: пн. – вс. 09.00-21.00',
-			phones: 'Тел.: (499) 324-42-44, 324-25-22'
+			"id": 21,
+			"name": "КЛИНИКО-ДИАГНОСТИЧЕСКИЙ ЦЕНТР\"МЕДСИ\" НА БЕЛОРУССКОЙ (АО \"Группа компаний\"Медси\")",
+			"address": "Москва г, Грузинский пер, д.3а",
+			"chain": "МЕДСИ",
+			"coords": [55.7717687, 37.5792446],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 780-05-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "6.2"
 		}, {
-			id: 20,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'ул.Дубининская, д.57,стр.8',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.72011377732586, 37.635700499999885],
-			home: true,
-			hours: 'Режим работы: пн-пят. 8:00–21:00., суб., воск.-выходной',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 22,
+			"name": "ФГБУ \"9 ЛДЦ\" Минобороны России",
+			"address": "Москва г, Комсомольский пр-кт, д.13А",
+			"chain": "",
+			"coords": [55.7294429, 37.5900468],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 609-54-20/21",
+			"phones_home": "(495)609-53-10/11/12; 609-54-10 до 11.00",
+			"phones_dental": " (495) 609-54-20/21",
+			"position": "6.3"
 		}, {
-			id: 21,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'ул.Пречистенка, д.39',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.73878377728, 37.58710149999993],
-			home: true,
-			hours: 'Режим работы: пон-пят 8.00-22.00, суб. 09.00-19.00, воскр. 10.00-18.00',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 23,
+			"name": "Филиал No 6 ФГБУ \"3 ЦВКГ им. А.А. Вишневского\"Минобороны России (52 КДЦ)",
+			"address": "Москва г, Планетная ул, д.3, корп.3",
+			"chain": "",
+			"coords": [55.797855, 37.549542],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 639-90-40,(495) 612-81-04",
+			"phones_home": "(495) 613-60-36/43, 614-45-19 до 12 часов",
+			"phones_dental": " (495)639-90-40- многоканальный2",
+			"position": "6.4"
 		}, {
-			id: 22,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'г.Ступино, ул.Службина, д. 2',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [54.8804997805305, 38.067233],
-			home: true,
-			hours: 'пн.-пят. с 8.00 до 20.00, суб. вск. с 10 до 16.00',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 24,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"(Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Сергия Радонежского ул, д.5/2",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.747192, 37.674055],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 662-58-85; (495) 678-03-63",
+			"phones_home": "(495) 678-03-63",
+			"phones_dental": " (495) 678-04-10",
+			"position": "6.5"
 		}, {
-			id: 23,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'г.Красногорск, ул.Успенская, д.5',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.833354276883114, 37.29097149999998],
-			home: true,
-			hours: 'Режим работы:пн. – пт. 08.00-21.00, сб.вс. 09.00-17.00. Вызов врача на дом: пн.-пт. 08.00-14.00, сб. 09.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 25,
+			"name": "ООО \"ССМЦ No2\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Серпуховская Б. ул, д.30, корп.1",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.725435, 37.6254],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "8(495)-411-67-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "6.6"
 		}, {
-			id: 24,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'Ленинградский пр-т, д.52',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.79728077704818, 37.54102650000001],
-			home: true,
-			hours: 'Режим работы: пн.- пт. 08-00- 21.00, сб. вс. 09.00- 17.00.Вызов врача на дом: пн.-пт.08.00-14.00, сб.08.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 26,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"",
+			"address": "Москва г, Первомайская ул, д.42",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.7925045, 37.7868887],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "8(499)701-98-83, 8(499)290-33-70",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "6.7"
 		}, {
-			id: 25,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'ул.Старокачаловская, д.3, корп. 3',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.56888377791044, 37.58193649999991],
-			home: true,
-			hours: 'Режим работы: пн. – пт. 07.00-22.00, сб. 09.00-20.00, вс. 09.00-17.00. Вызов врача на дом: пн.-пт.08.00-14.00, сб.09.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 27,
+			"name": "ООО \"ДЕНТО-ЭЛЬ-ЛИДЕР\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Фестивальная ул, д.4",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.856585, 37.48525],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495) 451-92-62",
+			"phones_home": "",
+			"phones_dental": " (495) 451-92-62",
+			"position": "6.8"
 		}, {
-			id: 26,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'г.Ступино, ул.Андропова, д.64',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [54.88794178048918, 38.06434049999992],
-			home: true,
-			hours: 'Режим работы: пн.-пт. 8.00-20.00, сб. вс. 10.00-17.00. Вызов врача на дом: пн. – пт. 08.00-14.00., сб.09.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 28,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"(Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Героев-Панфиловцев ул, д.1",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.852263, 37.4383348],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 662-58-85; (495)-496-60-12;(495)-496-99-10",
+			"phones_home": "495)-496-60-12; (495)-496-99-10",
+			"phones_dental": " 495)-496-60-12; (495)-496-99-10",
+			"position": "6.9"
 		}, {
-			id: 27,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'ул.Малая Полянка, д.7/7, стр.1',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.73481027729865, 37.61734749999988],
-			home: true,
-			hours: 'Режим работы: пн.- пт. 08.00-20.00, сб.-вс. 09.00-16.00. Вызов врача на дом: пн.-пт. 08.00-14.00, сб. 08.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 29,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"(Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Каширское ш, д.56",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.6455519, 37.6708469],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 662-58-85; (495)324-42-44; (495)324-15-13; (495) 324-25-22",
+			"phones_home": "(495)324-42-44;(495) 324-15-13;(495) 324-25-22",
+			"phones_dental": "",
+			"position": "6.10"
 		}, {
-			id: 28,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'г.Щелково, ул.Комсомольская, д.5',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.9291817764977, 37.993705999999925],
-			home: true,
-			hours: 'Режим работы:пн.-сб. 08.00-20.00, , вс. - 09.00-15.00',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 30,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"(Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Хорошевское ш, д.80",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.7786592, 55.7786592],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 662-58-85; (499)195-41-90; (499)-735-21-12 (взрослые и дети)",
+			"phones_home": "(499)195-41-90; (499)-735-21-12",
+			"phones_dental": " (499)195-41-88; (499)-195-89-27",
+			"position": "6.11"
 		}, {
-			id: 29,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'ул.Маршала Голованова, д.1, корп.2',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.65032227761916, 37.73123650000001],
-			home: true,
-			hours: 'Режим работы: пн.- пт. 08-00- 21.00, сб. вс. 09.00- 17.00.Вызов врача на дом: пн.-пт.08.00-14.00, сб.08.00-12.00.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 31,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"(Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Университетский пр-кт, д.4",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.6971015, 37.5535057],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 662-58-85; (499)134-25-77;(499)137-77-71",
+			"phones_home": "(499)134-25-77; (499)137-77-71",
+			"phones_dental": " (499)134-25-77; (499)137-77-71",
+			"position": "6.12"
 		}, {
-			id: 30,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'Дербеневская наб., д22. стр. 7, 2 этаж',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.71736027735715, 37.64689349999997],
-			home: true,
-			hours: 'Режим работы: пн. – пт.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 32,
+			"name": "ООО \"ЛЕЧЕБНО-ДИАГНОСТИЧЕСКИЙ ЦЕНТР\"КУТУЗОВСКИЙ\"",
+			"address": "Москва г, Давыдковская ул, д.5",
+			"chain": "",
+			"coords": [55.726374, 37.479554],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 372-15-55, (495) 255-36-36, 255-38-38, (499) 233-26-89, (495)989-77-58",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "6.13"
 		}, {
-			id: 31,
-			name: 'Сеть клиник МЕДСИ',
-			address: 'Пятницкое ш., д.37',
-			chain: 'Сеть клиник МЕДСИ',
-			coords: [55.85424877680004, 37.35740250000001],
-			home: true,
-			hours: 'сб.09.00-12.00.08.00-21.00, сб.-вс. выходной.',
-			phones: 'call-центр: (495) 7-800-500 (многоканальный)'
+			"id": 33,
+			"name": "ООО \"СКАНДИНАВСКИЙ ЦЕНТР ЗДОРОВЬЯ\"",
+			"address": "Москва г, Кабельная 2-я ул, д.2, корп.25",
+			"chain": "",
+			"coords": [55.748915, 37.710889],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 788-18-17; (495)645-00-54",
+			"phones_home": "",
+			"phones_dental": " (495) 788-18-17",
+			"position": "6.14"
 		}, {
-			id: 32,
-			name: 'ЗАО "Центральная поликлиника Литфонда"',
-			address: '1-я Аэропортовская ул., д .5',
-			chain: '',
-			coords: [55.801399277031024, 37.53559249999997],
-			home: true,
-			hours: 'Режим работы: пн. - пт. 08.00-20.00, сб.- 09.00-15.00, вс. - выходной. Вызов врача на дом: пн. – пт. 08:00 до 12:00.',
-			phones: 'тел.:(495) 708-10-25 (многоканальный). Вызов врача на дом: (499) 155-86-13'
+			"id": 35,
+			"name": "ООО \"ОН КЛИНИК\"",
+			"address": "Москва г, Зубовский б-р, д.35, корп.стр 1",
+			"chain": "\"ОН КЛИНИК\"",
+			"coords": [55.73702, 37.5887081],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "6.15"
 		}, {
-			id: 33,
-			name: 'ООО «Лечебно-диагностический центр «Кутузовский»',
-			address: 'ул.Давыдковская, д.5',
-			chain: '',
-			coords: [55.726167277328706, 37.47927649999998],
-			home: true,
-			hours: 'пн.-пт. 08.00-21.00, сб. -09.00-20.00, вс.- 09.00-18.00',
-			phones: 'тел.: (499) 372-1555'
+			"id": 35,
+			"name": "ООО \"ОН КЛИНИК\"",
+			"address": "Москва г, Цветной б-р, д.30",
+			"chain": "\"ОН КЛИНИК\"",
+			"coords": [55.772288, 37.622514],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 258-25-26,дет.рег(495)223-22-87",
+			"phones_home": "до 14-00",
+			"phones_dental": " (495) 223-22-22",
+			"position": "6.16"
 		}, {
-			id: 34,
-			name: 'ООО "Скандинавский Центр Здоровья"',
-			address: '2-ая Кабельная ул., д. 2А, стр. 25',
-			chain: '',
-			coords: [55.74571677723218, 37.71134749999994],
-			home: true,
-			hours: 'Режим работы: пн. - пт. 08.00-21.00, сб. 09.00-15.00 вс.- выходной.Вызов врача на дом: пн. – пт. 08.00-11.00.',
-			phones: 'тел.:(495) 788-18-17 (многоканальный) Вызов врача на дом: 788-18-17'
+			"id": 36,
+			"name": "ООО \"ОН КЛИНИК\"",
+			"address": "Москва г, Трехгорный Вал ул, д.12, корп.2",
+			"chain": "\"ОН КЛИНИК\"",
+			"coords": [55.759138, 37.561562],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 258-25-26",
+			"phones_home": "",
+			"phones_dental": " (495) 223-22-22",
+			"position": "6.17"
 		}, {
-			id: 35,
-			name: 'Сеть клиник ООО «Он клиник»',
-			address: 'Цветной б-р, 30, корп. 2',
-			chain: 'Сеть клиник ООО «Он клиник»',
-			coords: [55.7719957771454, 37.6222615],
-			home: true,
-			hours: 'Режим работы: ежедневно 09.00 - 21.00. Вызов врача на дом пн.-сб. 08.00-14.00',
-			phones: 'Регистратура: 258-25-26, 223-22-22 (многоканальный)'
+			"id": 37,
+			"name": "ООО \"ОН КЛИНИК\"",
+			"address": "Москва г, Молчановка Б. ул, д.32",
+			"chain": "\"ОН КЛИНИК\"",
+			"coords": [55.7535595, 37.5882611],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 258-25-26",
+			"phones_home": "",
+			"phones_dental": " (495) 223-22-22",
+			"position": "6.18"
 		}, {
-			id: 36,
-			name: 'Сеть клиник ООО «Он клиник»',
-			address: 'ул. Воронцовская, д. 8 стр.6',
-			chain: 'Сеть клиник ООО «Он клиник»',
-			coords: [55.738707777279174, 37.65578650000002],
-			home: true,
-			hours: 'ежедневно 09.00 - 21.00. Вызов врача на дом пн.-сб. 08.00-14.00.',
-			phones: '(495) 223-22-79, 223-22-22.'
+			"id": 38,
+			"name": "ООО \"ОН КЛИНИК\"",
+			"address": "Москва г, Воронцовская ул, д.8/6",
+			"chain": "\"ОН КЛИНИК\"",
+			"coords": [55.738745, 37.655824],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 258-25-26",
+			"phones_home": "до 14-00",
+			"phones_dental": " (495) 223-22-22",
+			"position": "6.19"
 		}, {
-			id: 37,
-			name: 'Сеть клиник ООО «Он клиник»',
-			address: 'Трехгорный вал, д. 12, стр.2',
-			chain: 'Сеть клиник ООО «Он клиник»',
-			coords: [55.75912677713183, 37.56166149999992],
-			home: true,
-			hours: 'Режим работы: ежедневно 09.00 - 21.00. Вызов врача на дом пн.-сб. 08.00-14.00',
-			phones: 'Регистратура: (495) 223-22-22 (многоканальный)'
+			"id": 39,
+			"name": "Клиническая больница No1 МЕДСИ(АО \"Группакомпаний \"Медси\" )",
+			"address": "Московская обл, Красногорский р-н,Отрадное п, Пятницкое ш, д.6",
+			"chain": "МЕДСИ",
+			"coords": [55.8811726, 37.3187375],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "8-495-730-57-36",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "7.1"
 		}, {
-			id: 38,
-			name: 'Сеть клиник ООО «Он клиник»',
-			address: 'ул.Б. Молчановка, д.32, стр.1',
-			chain: 'Сеть клиник ООО «Он клиник»',
-			coords: [55.75349877719316, 37.58845799999996],
-			home: true,
-			hours: 'Режим работы: ежедневно 09.00 - 21.00. Вызов врача на дом пн.-сб. 08.00-14.00',
-			phones: 'Регистратура: 223-22-22 (многоканальный)'
+			"id": 40,
+			"name": "ФГБУ \"ПОЛИКЛИНИКА No 4\" УДП РФ",
+			"address": "Москва г, Кутузовский пр-кт, д.20",
+			"chain": "",
+			"coords": [55.747262, 37.5502309],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 243-04-74. (499) 243-26-82;(499)243-70-62",
+			"phones_home": "(499) 243-10-81;(499)243-93-66",
+			"phones_dental": "",
+			"position": "8.1"
 		}, {
-			id: 39,
-			name: 'Клиника "Альфа-Центр Здоровья"',
-			address: 'Комсомольский пр-т, д. 17, стр. 11',
-			chain: '',
-			coords: [55.728240777290424, 37.586562499999935],
-			home: true,
-			hours: 'Режим работы: пн.–пт. 08.00 - 21.00; сб.-вс. 09.00-19.00',
-			phones: 'Тел.: (495) 663-8400 (колл-центр)'
+			"id": 41,
+			"name": "ООО \"ЛЕЧЕБНЫЙ ЦЕНТР\"",
+			"address": "Москва г, Тимура Фрунзе ул, д.15/1",
+			"chain": "",
+			"coords": [55.736785, 37.585044],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 786-45-25/20/22",
+			"phones_home": "(495) 786-45-21/26 -буднидо 17.00, вых.до 13.00",
+			"phones_dental": " (495)786-45-20",
+			"position": "8.2"
 		}, {
-			id: 40,
-			name: 'ГБУЗ г.Москвы "Городская поликлиника No220" ДЗМ',
-			address: 'ул.Заморенова, д.27',
-			chain: '',
-			coords: [55.76053977714641, 37.56763500000002],
-			home: true,
-			hours: '',
-			phones: ''
+			"id": 42,
+			"name": "ГБУЗ \"ГП No220 ДЗМ\"",
+			"address": "Москва г, Заморенова ул, д.27",
+			"chain": "",
+			"coords": [55.7605159, 37.5677667],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 252-64-89, (499) 255-43-75,",
+			"phones_home": "",
+			"phones_dental": " (499) 252-64-89, (499) 255-43-7",
+			"position": "8.3"
 		}, {
-			id: 41,
-			name: 'ФГБУ "Поликлиника No4" УДП РФ',
-			address: 'Кутузовский пр-т, д. 20',
-			chain: '',
-			coords: [55.74737327718961, 37.55051349999996],
-			home: true,
-			hours: '',
-			phones: ''
+			"id": 43,
+			"name": "КЛИНИКА \"МЕДСИ\" В КРАСНОГОРСКЕ (АО\"Группа компаний \"Медси\")",
+			"address": "Московская обл, Красногорский р-н,Красногорск г, Успенская ул, д.5",
+			"chain": "МЕДСИ",
+			"coords": [55.833417, 37.291114],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 228-08-03 495-7-800-500",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "9.1"
 		}, {
-			id: 42,
-			name: 'ООО «Клиники Чайка» (на Ленинском)',
-			address: 'Ленинский пр-т, д.67, корп.2',
-			chain: 'ООО «Клиники Чайка»',
-			coords: [55.69026277749495, 37.553863500000006],
-			hours: 'будни с 8.00-21.00, суб.9.00-15.00,дежурный врач, воскрес-выходной',
-			phones: 'тел.: (495) 668-1212 (единый, многоканальный)'
+			"id": 44,
+			"name": "КЛИНИКА \"МЕДСИ\" В ЩЕЛКОВО (АО \"Группакомпаний \"Медси\")",
+			"address": "Московская обл, Щелковский р-н,Щелково г, Комсомольская ул, д.5",
+			"chain": "МЕДСИ",
+			"coords": [55.929215, 37.9937029],
+			"home": true,
+			"dental": false,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 780-05-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "9.2"
 		}, {
-			id: 43,
-			name: 'ООО «Клиники Чайка» (Метрополис)',
-			address: 'Ленинградское шоссе, д.16А, стр.3',
-			chain: 'ООО «Клиники Чайка»',
-			coords: [55.82222027688758, 37.49972250000002],
-			hours: 'Режим работы: будни: 07.30-21.30, суб. 9.00-15.00 - деж.врач; воскр.-выходной',
-			phones: 'тел.: (495) 668-1212 (единый, многоканальный)'
+			"id": 45,
+			"name": "ООО \"Клиники Чайка\", клиника в Рига Лэнд",
+			"address": "Московская обл, Красногорский р-н,Михалково д",
+			"chain": "Чайка",
+			"coords": [55.7904429, 37.246555],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "+74956681212",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "10.1"
 		}, {
-			id: 44,
-			name: 'ООО «Клиники Чайка» (Рига Лэнд)',
-			address: 'Красногорский р-н, вблизи д. Михалково',
-			chain: 'ООО «Клиники Чайка»',
-			coords: [55.788840765393104, 37.248062955047516],
-			hours: 'круглосуточно',
-			phones: 'тел.: (495) 668-1212 (единый, многоканальный)'
+			"id": 46,
+			"name": "ООО \"Клиника Чайка\", клиника в Белых садах",
+			"address": "Москва г, Лесная ул, д.9",
+			"chain": "Чайка",
+			"coords": [55.779107, 37.5887305],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "+74956681212",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "10.2"
 		}, {
-			id: 45,
-			name: 'ООО «Клиники Чайка» (Москва-Сити)',
-			address: 'Пресненская набережная, д.8., стр1. ММДЦ "Москва-Сити". МФК "Город Столиц", Башня "Москва"',
-			chain: 'ООО «Клиники Чайка»',
-			coords: [55.74711477724666, 37.539077499999934],
-			hours: 'Режим работы: пон.-пятн. - 7.30-21.00, суб. с 9.00-15.00, воскр. - выходной.',
-			phones: 'тел.: (495) 668-1212 (единый, многоканальный)'
+			"id": 47,
+			"name": "ООО \"Клиника Чайка\", клиника на Войковской",
+			"address": "Москва г, Ленинградское ш, д.16А,корп.33",
+			"chain": "Чайка",
+			"coords": [55.8213748, 37.4977188],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "+7495 668 1212",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "10.3"
 		}, {
-			id: 46,
-			name: 'ООО «Клиника современных технологий медицины»',
-			address: 'г.Люберцы, ул. П/О 3, д.49, стр.1',
-			chain: '',
-			coords: [55.68180084739035, 37.91671599999997],
-			hours: 'Режим работы: пон.-пят. с 09.00-21.00; суб-воскр. с 08.00-21.00',
-			phones: 'Регистратура: (498) 720-17-87'
+			"id": 48,
+			"name": "ООО \"Клиники Чайка\"",
+			"address": "Москва г, Пресненская наб, д.8, корп.1",
+			"chain": "Чайка",
+			"coords": [55.7469862, 37.5392672],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "+74956681212",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "10.4"
 		}, {
-			id: 47,
-			name: 'ФГУП «ЦБЭЛИС»',
-			address: 'г. Жуковский, ул.Дзержинского, д.16',
-			chain: '',
-			coords: [55.59612677783435, 38.12861499999999],
-			hours: 'Режим работы: пн.-пт. 09.00-15.00, сб., вс. выходной.',
-			phones: 'Регистратура: 556-84-53'
+			"id": 49,
+			"name": "ООО \"КЛИНИКА СОВРЕМЕННЫХ МЕДИЦИНСКИХ ТЕХНОЛОГИЙ\"",
+			"address": "Москва г, Лесная ул, д.8А",
+			"chain": "",
+			"coords": [55.778281, 37.588629],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "11.1"
+		}, {
+			"id": 50,
+			"name": "ПОЛИКЛИНИКА \"МЕДРОСКОНТРАКТ\"",
+			"address": "Москва г, Международная ул, д.19",
+			"chain": "",
+			"coords": [55.744508, 37.688129],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 678-90-01. (495) 671-50-72. (495)671-50-73",
+			"phones_home": "(495) 911-47-06 -пн-пт 8-14, сб9-14 (495) 671-16-84",
+			"phones_dental": " (495)678-90-01",
+			"position": "11.2"
+		}, {
+			"id": 51,
+			"name": "ООО \"КЛИНИКА ЛМС\"",
+			"address": "Москва г, Последний пер, д.28",
+			"chain": "\"КЛИНИКА ЛМС\"",
+			"coords": [55.769683, 37.630651],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 782-88-82; (495) 663-03-03",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "11.3"
+		}, {
+			"id": 52,
+			"name": "ООО \"КЛИНИКА ЛМС\"",
+			"address": "Москва г, Комсомольский пр-кт, д.28",
+			"chain": "\"КЛИНИКА ЛМС\"",
+			"coords": [55.727024, 37.579689],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 782-88-82",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "11.4"
+		}, {
+			"id": 53,
+			"name": "ООО \"КЛИНИКА ЛМС\"",
+			"address": "Москва г, Сущевский Вал ул, д.12",
+			"chain": "\"КЛИНИКА ЛМС\"",
+			"coords": [55.791972, 37.599795],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 782-88-82; (495) 663-03-03",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "11.5"
+		}, {
+			"id": 54,
+			"name": "ЗАО \"КЛИНИКА СОВРЕМЕННЫХ МЕДИЦИНСКИХ ТЕХНОЛОГИЙ\"",
+			"address": "Москва г, Головин Б. пер, д.4",
+			"chain": "",
+			"coords": [55.7692241, 37.6266721],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 782-88-82; (495) 663-03-03",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "11.6"
+		}, {
+			"id": 55,
+			"name": "ООО Клиника \"Креде Эксперто\"",
+			"address": "Москва г, Товарищеский пер, д.10",
+			"chain": "",
+			"coords": [55.7424564, 37.662227],
+			"home": true,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 232-48-40, доб.226",
+			"phones_home": "",
+			"phones_dental": " 232-48-40(41,42,43)",
+			"position": "11.7"
+		}, {
+			"id": 56,
+			"name": "ООО \"ДентаВита Сеть\"",
+			"address": "Москва г, Козихинский Б. пер, д.19/6",
+			"chain": "ДентаВита",
+			"coords": [55.7641338, 37.5952755],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 778-98-27; 699-40-65; 699-35-61;699-83-96",
+			"phones_home": "",
+			"phones_dental": " (495) 778-98-27",
+			"position": "12.1"
+		}, {
+			"id": 57,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО \"ЦАПОИС\"",
+			"address": "Москва г, Арбат ул, д.42, корп.3",
+			"chain": "",
+			"coords": [55.748578, 37.586495],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(499)241-82-42, 241-81-31",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС),(499)241-82-42",
+			"position": "12.2"
+		}, {
+			"id": 58,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО \"Стоматология наСоколе\"",
+			"address": "Москва г, Ленинградский пр-кт, д.76, корп.3",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.807118, 37.515845],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт дляДМС),(499)155-07-79, 155-07-80",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт дляДМС),(499)155-07-79, 155-07-80",
+			"position": "12.3"
+		}, {
+			"id": 59,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО \"Клиника наЧистых\"",
+			"address": "Москва г, Бобров пер, д.4, корп.1",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.7653901, 37.6341252],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС), (495)201-04-01",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС),(495)201-04-01",
+			"position": "12.4"
+		}, {
+			"id": 60,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"СТОМАТОЛОГИЯ НА ЮГО-ЗАПАДНОЙ\"",
+			"address": "Москва г, Покрышкина ул, д.8",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.6647309, 37.4719115],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(495)981-66-16",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС),(495)981-66-16",
+			"position": "12.5"
+		}, {
+			"id": 61,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"СТОМАТОЛОГИЯ НА МАЯКОВСКОЙ\"",
+			"address": "Москва г, Тверская-Ямская 2-Я ул, д.20-22",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.7719309, 37.5943931],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 374-50-01 (пульт дляДМС); (499) 250-20-96, (495)981-51-01, (499)250-26-74",
+			"phones_home": "",
+			"phones_dental": " (495) 374-50-01 (пульт для ДМС)",
+			"position": "12.6"
+		}, {
+			"id": 62,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"ЮНИДЕНТ СТОМАТОЛОГИЯ-11\"",
+			"address": "Москва г, Барышиха ул, д.20",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.844025, 37.35197],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт дляДМС),(495) 794-84-59",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт дляДМС),(495) 794-84-59",
+			"position": "12.7"
+		}, {
+			"id": 63,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология на Академической\"",
+			"address": "Москва г, Севастопольский пр-кт, д.15",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.659318, 37.575918],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт дляДМС),(499) 123-62-51",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт дляДМС),(499) 123-62-51",
+			"position": "12.8"
+		}, {
+			"id": 64,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"ЮНИДЕНТ СТОМАТОЛОГИЯ-9\"",
+			"address": "Москва г, Лескова ул, д.30",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.8927994, 37.6167191],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт дляДМС),(499) 745-36-93. (499) 745-36-94",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт дляДМС),(499) 745-36-93. (499) 745-36-94",
+			"position": "12.9"
+		}, {
+			"id": 65,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология в Выхино\"",
+			"address": "Москва г, Ташкентская ул, д.24, корп.1",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.700463, 37.809565],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт дляДМС),(495) 376-66-91",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт дляДМС),(495) 376-66-91",
+			"position": "12.10"
+		}, {
+			"id": 66,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"ЮНИДЕНТ Стоматология-6\"",
+			"address": "Москва г, Дмитровское ш, д.72",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.8594505, 37.5575263],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(495) 487-82-28",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС),(495) 487-82-28",
+			"position": "12.11"
+		}, {
+			"id": 67,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология на Планерной\"",
+			"address": "Москва г, Туристская ул, д.33",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.859497, 37.419058],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(499) 762-04-03, (499) 762-15-01",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС),(499) 762-04-03. (499) 762-15-01. (495) 675-00-00",
+			"position": "12.12"
+		}, {
+			"id": 68,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология на Щелковской\"",
+			"address": "Москва г, Щелковское ш, д.82",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.810522, 37.813966],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(499)748-81-80, 748-84-01",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС)",
+			"position": "12.13"
+		}, {
+			"id": 69,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология на Автозаводской\"",
+			"address": "Москва г, Машиностроения 1-я ул, д.2/7",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.715366, 37.675692],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),675-61-01, 675-67-65",
+			"phones_home": "",
+			"phones_dental": " (495)374-50-01 (пульт для ДМС)",
+			"position": "12.14"
+		}, {
+			"id": 70,
+			"name": "ЮНИДЕНТ СТОМАТОЛОГИЯ - ООО\"Стоматология в Новогиреево\"",
+			"address": "Москва г, Свободный пр-кт, д.30",
+			"chain": "ЮНИДЕНТ СТОМАТОЛОГИЯ",
+			"coords": [55.7465, 37.814153],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)374-50-01 (пульт для ДМС),(495) 302-95-85, 988-80-46",
+			"phones_home": "",
+			"phones_dental": " (495) 302-95-85, 988-80-464",
+			"position": "12.15"
+		}, {
+			"id": 71,
+			"name": "Общество с ограниченной ответственностью \"ДЕНТА-ЛЮКС\"",
+			"address": "Московская обл, Жуковский г, Гудкова ул, д.21",
+			"chain": "ДЕНТА-ЛЮКС",
+			"coords": [55.599865, 38.086849],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "",
+			"phones_home": "",
+			"phones_dental": " 849848-536-55,8901-522-64-64",
+			"position": "12.16"
+		}, {
+			"id": 72,
+			"name": "ООО \"ДЕНТА-ЛЮКС\"",
+			"address": "Московская обл, Жуковский г, Дзержинскогоул, д.16",
+			"chain": "ДЕНТА-ЛЮКС",
+			"coords": [55.59615, 38.128632],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(496) 484-27-66,903 228-44-22",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "12.17"
+		}, {
+			"id": 73,
+			"name": "ООО \"СТОМАТОЛОГИЯ No 4\"",
+			"address": "Москва г, Марксистская ул, д.3",
+			"chain": "",
+			"coords": [55.738088, 37.6628231],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 638-07-08",
+			"phones_home": "",
+			"phones_dental": " (495) 638-07-08",
+			"position": "12.18"
+		}, {
+			"id": 74,
+			"name": "ООО \"НАВА\"",
+			"address": "Москва г, Стрельбищенский пер, д.29а",
+			"chain": "",
+			"coords": [55.765248, 37.539495],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 256-85-10",
+			"phones_home": "",
+			"phones_dental": " (499) 256-85-10; (499) 259-53-57",
+			"position": "12.19"
+		}, {
+			"id": 75,
+			"name": "ООО \"НАВА\"",
+			"address": "Москва г, Тишинская пл, д.8",
+			"chain": "",
+			"coords": [55.770817, 37.583369],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 254-85-22",
+			"phones_home": "",
+			"phones_dental": " (499) 254-17-38; (499) 254-85-22",
+			"position": "12.20"
+		}, {
+			"id": 76,
+			"name": "ООО \"ДАЛЬВЕН\" (СТОМАТОЛОГИЧЕСКАЯКЛИНИКА ГЕНРИ КЛАРКА)",
+			"address": "Москва г, Колобовский 1-й пер, д.14",
+			"chain": "",
+			"coords": [55.768554, 37.617858],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 960-75-50",
+			"phones_home": "",
+			"phones_dental": " (495) 960-75-50",
+			"position": "12.21"
+		}, {
+			"id": 77,
+			"name": "ООО \"ДАЛЬВЕН\" (СТОМАТОЛОГИЧЕСКАЯКЛИНИКА ГЕНРИ КЛАРКА)",
+			"address": "Москва г, Валовая ул, д.8",
+			"chain": "",
+			"coords": [55.731033, 37.633182],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 960-75-50",
+			"phones_home": "",
+			"phones_dental": " (495) 960-75-50",
+			"position": "12.22"
+		}, {
+			"id": 78,
+			"name": "ООО \" Медицинский центр \"ЕВРОМЕДИКА\"",
+			"address": "Москва г, Гагаринский пер, д.23, корп.1",
+			"chain": "",
+			"coords": [55.7446965, 37.5931291],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 637-58-48/52-32",
+			"phones_home": "",
+			"phones_dental": " (495) 637-58-48/52-32",
+			"position": "12.23"
+		}, {
+			"id": 79,
+			"name": "ООО \"ССМЦ No2\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Южнобутовская ул, д.8",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.5441503, 37.5406381],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90",
+			"phones_home": "",
+			"phones_dental": "8499-793-01-09",
+			"position": "12.24"
+		}, {
+			"id": 80,
+			"name": "ООО \"ССМЦ No2\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Хорошевское ш, д.80",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.7786592, 37.5228935],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "",
+			"phones_home": "",
+			"phones_dental": "8499-195-89-27,8499-195-41-88",
+			"position": "12.25"
+		}, {
+			"id": 81,
+			"name": "ООО \"ССМЦ No1\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Хачатуряна ул, д.12",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.857756, 37.5981],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (499) 904-18-33",
+			"phones_home": "",
+			"phones_dental": " (499) 904-18-33",
+			"position": "12.26"
+		}, {
+			"id": 82,
+			"name": "ООО \"ССМЦ No1\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Садовая-Самотечная ул, д.13",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.7740201, 37.6180157],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495) 684-55-86",
+			"phones_home": "",
+			"phones_dental": " (495) 684-55-86",
+			"position": "12.27"
+		}, {
+			"id": 83,
+			"name": "ООО \"ССМЦ No1\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Черняховского ул, д.2",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.8014959, 37.5325432],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499) 155-88-30",
+			"phones_home": "",
+			"phones_dental": " (499) 155-88-30",
+			"position": "12.28"
+		}, {
+			"id": 84,
+			"name": "ООО \"ДЕНТО-ЭЛЬ-ЛИДЕР\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Фестивальная ул, д.4",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.856585, 37.48525],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495) 451-92-62",
+			"phones_home": "",
+			"phones_dental": " (495) 451-92-62",
+			"position": "12.29"
+		}, {
+			"id": 85,
+			"name": "ООО \"ДЕНТО-ЭЛЬ-ЛИДЕР\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Братиславская ул, д.26",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.654206, 37.763725],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495)-347-93-20, (499)722-12-90",
+			"phones_home": "",
+			"phones_dental": " (495) 347-93-20",
+			"position": "12.30"
+		}, {
+			"id": 86,
+			"name": "ООО \"ССМЦ No2\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Университетский пр-кт, д.4",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.6971015, 37.5535057],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (499) 134-25-77",
+			"phones_home": "",
+			"phones_dental": "(499) 134-25-77",
+			"position": "12.31"
+		}, {
+			"id": 87,
+			"name": "ООО \"ССМЦ No2\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Сергия Радонежского ул, д.5/2",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.747192, 37.674055],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495) 678-0410",
+			"phones_home": "",
+			"phones_dental": "(495) 678-0410",
+			"position": "12.32"
+		}, {
+			"id": 88,
+			"name": "ООО \"ССМЦ No1\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Героев Панфиловцев ул, д.1",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.852263, 37.4383348],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (495) 496-60-12",
+			"phones_home": "",
+			"phones_dental": "(495) 496-60-12",
+			"position": "12.33"
+		}, {
+			"id": 89,
+			"name": "ООО \"ССМЦ No1\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Симферопольский б-р, д.17",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.652911, 37.605606],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(499)195-41-90, (499) 794-67-01,",
+			"phones_home": "",
+			"phones_dental": " (499) 794-67-01",
+			"position": "12.34"
+		}, {
+			"id": 90,
+			"name": "\"Поликлиника.ру на Автозаводской\"",
+			"address": "Москва г, Кожуховский 1-й проезд, д.9",
+			"chain": "",
+			"coords": [55.706297, 37.660704],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "495-925-88-78",
+			"phones_home": "",
+			"phones_dental": " 495-925-88-78",
+			"position": "12.35"
+		}, {
+			"id": 91,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Марьинский Парк ул, д.19, корп.2",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.66309, 37.779389],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78, +74956588777",
+			"phones_home": "",
+			"phones_dental": "(495) 925-88-78, +74956588777",
+			"position": "12.36"
+		}, {
+			"id": 92,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Таганская ул, д.32/1, корп.17",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.739028, 37.664503],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": " (495) 925-88-78",
+			"position": "12.37"
+		}, {
+			"id": 93,
+			"name": "ООО \"НЮАНС\" (Стоматология на Каретном)",
+			"address": "Москва г, Каретный М. пер, д.14",
+			"chain": "",
+			"coords": [55.7711059, 37.6153669],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 725-17-70, 8-903-725-17-70",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "12.38"
+		}, {
+			"id": 94,
+			"name": "ООО \"Экстрагорстрой\"",
+			"address": "Москва г, Столярный пер, д.7, корп.2",
+			"chain": "",
+			"coords": [55.763282, 37.566147],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "12.39"
+		}, {
+			"id": 95,
+			"name": "ООО \"Интермедсервис-Плюс\"",
+			"address": "Москва г, Факультетский пер, д.4",
+			"chain": "",
+			"coords": [55.811865, 37.4973249],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "12.40"
+		}, {
+			"id": 96,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Академика Анохина ул, д.2",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.6715769, 37.4766371],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495)4302526; (495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": " (495) 925-88-78",
+			"position": "12.41"
+		}, {
+			"id": 97,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Садовая-Каретная ул, д.20",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.7724575, 37.6099777],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": " (495) 925-88-78",
+			"position": "12.42"
+		}, {
+			"id": 98,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Керченская ул, д.13",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.648044, 37.5782729],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78, +7 4953183922",
+			"phones_home": "",
+			"phones_dental": "(495) 925-88-78, +7 4953183922",
+			"position": "12.43"
+		}, {
+			"id": 99,
+			"name": "ООО \"СТОМАТОЛОГИЧЕСКАЯ КЛИНИКАЗУБ.РУ\"",
+			"address": "Москва г, Михайловский Верхн. 2-й проезд, д.9",
+			"chain": "ЗУБ.РУ",
+			"coords": [55.7088403, 37.6019683],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": "(495) 925-88-78",
+			"position": "12.44"
+		}, {
+			"id": 100,
+			"name": "ООО \"ДИРЕКЦИЯ\"",
+			"address": "Москва г, Басманная Н. ул, д.10, корп.1",
+			"chain": "",
+			"coords": [55.7694096, 37.6557813],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-88-78",
+			"phones_home": "",
+			"phones_dental": " (495) 925-88-785",
+			"position": "12.45"
+		}, {
+			"id": 101,
+			"name": "ООО \"ЛАБОРАТОРИЯ УЛЫБКИ\"",
+			"address": "Москва г, Леонтьевский пер, д.11",
+			"chain": "",
+			"coords": [55.759719, 37.6034055],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 609-91-39",
+			"phones_home": "",
+			"phones_dental": " (495) 609-91-39",
+			"position": "12.46"
+		}, {
+			"id": 102,
+			"name": "ЗАО \"НОРМОДЕНТ\"",
+			"address": "Москва г, 8 Марта ул, д.6",
+			"chain": "НОРМОДЕНТ",
+			"coords": [55.801239, 37.555694],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 614-13-25",
+			"phones_home": "",
+			"phones_dental": " (495) 614-13-25",
+			"position": "12.47"
+		}, {
+			"id": 103,
+			"name": "ООО \"НОРМОДЕНТ-ЦЕНТР\"",
+			"address": "Москва г, Пятницкая ул, д.54",
+			"chain": "НОРМОДЕНТ",
+			"coords": [55.73407, 37.626602],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 953-29-69; 953-25-63",
+			"phones_home": "",
+			"phones_dental": " (495) 953-29-69",
+			"position": "12.48"
+		}, {
+			"id": 104,
+			"name": "ООО \"НОРМОДЕНТ-ЦЕНТР\"",
+			"address": "Москва г, Комсомольский пр-кт, д.28",
+			"chain": "НОРМОДЕНТ",
+			"coords": [55.727024, 37.579689],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 287-90-83; 287-90-84",
+			"phones_home": "",
+			"phones_dental": " (495) 287-90-83",
+			"position": "12.49"
+		}, {
+			"id": 105,
+			"name": "Клиника Центральная - ООО \"НОРМОДЕНТ-ЦЕНТР\"",
+			"address": "Москва г, Мясницкая ул, д.13",
+			"chain": "НОРМОДЕНТ",
+			"coords": [55.7626891, 37.634389],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 644-00-26 (многопрофильныйцентр)",
+			"phones_home": "(495) 644-00-26",
+			"phones_dental": " (495) 628-15-04; (495) 621-16-77; (495)627-23-74 - факс; (495) 621-81-48 - факс",
+			"position": "12.50"
+		}, {
+			"id": 106,
+			"name": "ЗАО \"ДентаВита Центр\"",
+			"address": "Москва г, Расковой ул, д.16",
+			"chain": "ДентаВита",
+			"coords": [55.7874639, 37.5728219],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 229-67-87",
+			"phones_home": "",
+			"phones_dental": " (495) 229-67-87",
+			"position": "12.51"
+		}, {
+			"id": 107,
+			"name": "ООО \"Современник на Чистых\"",
+			"address": "Москва г, Страстной б-р, д.11, корп.2",
+			"chain": "",
+			"coords": [55.767916, 37.609048],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "495 925 77 47",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "12.52"
+		}, {
+			"id": 108,
+			"name": "ООО \"ДентаВита Сеть\"",
+			"address": "Москва г, Козловский Б. пер, д.7",
+			"chain": "ДентаВита",
+			"coords": [55.767348, 37.647273],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 229-67-20",
+			"phones_home": "",
+			"phones_dental": " (495) 229-67-20",
+			"position": "12.53"
+		}, {
+			"id": 109,
+			"name": "ООО \"ДентаВита Лидер\"",
+			"address": "Москва г, Земляной Вал пл, д.64, корп.2",
+			"chain": "ДентаВита",
+			"coords": [55.7463015, 37.6547593],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 228-09-17; 720-48-28",
+			"phones_home": "",
+			"phones_dental": " (495) 228-09-17",
+			"position": "12.54"
+		}, {
+			"id": 110,
+			"name": "ООО \"ДентаВита Сеть\"",
+			"address": "Москва г, Новокузнецкая ул, д.3",
+			"chain": "ДентаВита",
+			"coords": [55.739993, 37.630267],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 778-98-17",
+			"phones_home": "",
+			"phones_dental": " (495) 953-71-17",
+			"position": "12.55"
+		}, {
+			"id": 111,
+			"name": "ООО \"Балитур\"",
+			"address": "Москва г, Зубовский б-р, д.27/26, корп.5",
+			"chain": "",
+			"coords": [55.7374095, 37.5887627],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 925-77-37",
+			"phones_home": "",
+			"phones_dental": " (495) 925-77-37",
+			"position": "12.56"
+		}, {
+			"id": 112,
+			"name": "ООО \"ДентаВита Сеть\"",
+			"address": "Москва г, Газетный пер, д.9, корп.4",
+			"chain": "ДентаВита",
+			"coords": [55.758329, 37.6081829],
+			"home": false,
+			"dental": true,
+			"hospital": false,
+			"hours": "",
+			"phones": "(495) 734-99-59",
+			"phones_home": "",
+			"phones_dental": " (495) 734-99-59",
+			"position": "12.57"
+		}, {
+			"id": 113,
+			"name": "ФГАУ \"НИИ НХ\" Минздрава России",
+			"address": "Москва г, Тверская-Ямская 4-Я ул, д.16",
+			"chain": "",
+			"coords": [55.77393, 37.595996],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 972-85-86;(499) 250-88-75",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.1"
+		}, {
+			"id": 114,
+			"name": "ФГБУ ГНЦ ФМБЦ ИМ. А.И.БУРНАЗЯНА ФМБАРОССИИ",
+			"address": "Москва г, Маршала Новикова ул, д.23",
+			"chain": "",
+			"coords": [55.805416, 37.456893],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8-916-138-38-90;(499) 190-85-55. (499)190-86-22 стоматолог. отделение",
+			"phones_home": "",
+			"phones_dental": " 8499-190-86-22",
+			"position": "13.2"
+		}, {
+			"id": 115,
+			"name": "ФГБУЗ КБ No85 ФМБА России",
+			"address": "Москва г, Москворечье ул, д.16",
+			"chain": "",
+			"coords": [55.642876, 37.666196],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 324-86-56/18-47",
+			"phones_home": "",
+			"phones_dental": " (499) 324-86-65/18-47",
+			"position": "13.3"
+		}, {
+			"id": 117,
+			"name": "ФГБУ \"Клиническая больница\" УДП РФ",
+			"address": "Москва г, Лосиноостровская ул, д.45",
+			"chain": "",
+			"coords": [55.8353941, 37.7428711],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8499-167-03-94(05-82,05-88,05-90дет))",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.5"
+		}, {
+			"id": 118,
+			"name": "ФГБУ ФНКЦ ФМБА РОССИИ",
+			"address": "Москва г, Ореховый б-р, д.28",
+			"chain": "",
+			"coords": [55.616514, 37.763933],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495)395-61-04-медрегистратор;(499)725-44-40; (495) 396-83-96",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.6"
+		}, {
+			"id": 119,
+			"name": "ФИЛИАЛ \"МЕДИНЦЕНТР\" ФГУП \"ГЛАВУПДКПРИ МИД РФ\"",
+			"address": "Москва г, Боткинский 2-й проезд, д.5",
+			"chain": "",
+			"coords": [55.7814079, 37.5548041],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "Взрослая (495) 933-86-49; 933-86-48",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.7"
+		}, {
+			"id": 120,
+			"name": "ГБУЗ \"ГКБ No31 ДЗМ\"",
+			"address": "Москва г, Лобачевского ул, д.42",
+			"chain": "",
+			"coords": [55.669725, 37.5017939],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8499-936-99-89 до 17.00,928-89-42-кругл",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.8"
+		}, {
+			"id": 121,
+			"name": "ГБОУ ВПО ПЕРВЫЙ МГМУ ИМ. И.М.СЕЧЕНОВА МИНЗДРАВА РОССИИ",
+			"address": "Москва г, Пироговская Б. ул, д.6, корп.1",
+			"chain": "",
+			"coords": [55.728754, 37.562366],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499)248-62-88 - пл.эк. отдел (ДМС), приемное отделение 962 999-91-43",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.9"
+		}, {
+			"id": 122,
+			"name": "ФГБУ \"НМХЦ ИМ. Н.И.ПИРОГОВА \"МИНЗДРАВСОЦРАЗВИТИЯ РОССИИ",
+			"address": "Москва г, Первомайская Ниж. ул, д.70",
+			"chain": "",
+			"coords": [55.790905, 37.819978],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 603-72-12 многоканальный (499) 464-44-54 - круглосуточныйпульт. (499) 464-23-63 - факсавтомат. (495) 461-24-63",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.10"
+		}, {
+			"id": 123,
+			"name": "ФГБУ \"КБ No 1\" УДП РФ",
+			"address": "Москва г, Староволынская ул, д.10",
+			"chain": "",
+			"coords": [55.7186379, 37.4824342],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 620-80-95 (многоканал),(495) 441-80-01(пол); (499) 726-03-90(бол)",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.11"
+		}, {
+			"id": 124,
+			"name": "ФГБУ \"ЦКБ с поликлиникой\" УДП РФ",
+			"address": "Москва г, Маршала Тимошенко ул, д.11",
+			"chain": "",
+			"coords": [55.7452644, 37.3947607],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 530-08-74 / 01-11",
+			"phones_home": "(499)141-02-27/140-52-77до 13.00",
+			"phones_dental": " (495) 530-08-74 / 01-11",
+			"position": "13.12"
+		}, {
+			"id": 125,
+			"name": "ФГАУ \"ЛЕЧЕБНО-РЕАБИЛИТАЦИОННЫЙЦЕНТР\" МИНЗДРАВА РОССИИ",
+			"address": "Москва г, Иваньковское ш, д.3",
+			"chain": "",
+			"coords": [55.819329, 37.466398],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 730-98-89",
+			"phones_home": "",
+			"phones_dental": " 8499-190-08-35",
+			"position": "13.13"
+		}, {
+			"id": 126,
+			"name": "ПАО \"К+31\"",
+			"address": "Москва г, Лобачевского ул, д.42",
+			"chain": "",
+			"coords": [55.669725, 37.5017939],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8499-143-99-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.14"
+		}, {
+			"id": 127,
+			"name": "Клинико-диагностический центр ФГБУ ФКЦВМТ ФМБА России",
+			"address": "Москва г, Абельмановская ул, д.4",
+			"chain": "",
+			"coords": [55.7363792, 37.6706626],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "на приемы 495 676-16-11 всубботу 671-00-80, КТ 929576-77-05, эндос.иссл.495 378-30-27, УЗИ 495 676-32-81, ФД 495 911-81-73, рентген495 676-23-11",
+			"phones_home": "495 676-97-45, 495 676 -26-31 до 12.00",
+			"phones_dental": " (495) 676-23-11",
+			"position": "13.15"
+		}, {
+			"id": 128,
+			"name": "НУЗ \"НКЦ ОАО \"РЖД\"",
+			"address": "Москва г, Волоколамское ш, д.84",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.820136, 37.456086],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 925-02-02/02-00",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.16"
+		}, {
+			"id": 129,
+			"name": "ФИЛИАЛ No1 ФГБУ \"ЛРКЦ\" МИНОБОРОНЫРОССИИ",
+			"address": "Московская обл, Химки г, Планернаямкр, д.влад-ие 14",
+			"chain": "",
+			"coords": [55.920238, 37.3664493],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495)575-42-53, (495) 571-42-78отд платных услуг, (495) 571-54-56 приемное отделение6",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.17"
+		}, {
+			"id": 130,
+			"name": "ГБУЗ \"ГКБ No13 ДЗМ\"",
+			"address": "Москва г, Велозаводская ул, д.1/1",
+			"chain": "",
+			"coords": [55.718186, 37.6642917],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 674-16-39",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.18"
+		}, {
+			"id": 131,
+			"name": "НУЗ \"Дорожная клиническая больницаим.Н.А.Семашко на ст.Люблино ОАО \"РЖД\"",
+			"address": "Москва г, Ставропольская ул, д.23, корп.1",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.683846, 37.7583849],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 266-98-98-Coll,(499) 266-98-32;(495)359-02-43",
+			"phones_home": "(499)266-98-32,8917-579-83-76,8967-114-29-07",
+			"phones_dental": " (499) 266-98-98-Coll,(495)359-02-43",
+			"position": "13.19"
+		}, {
+			"id": 132,
+			"name": "НУЗ \"ЦКБ No 6 ОАО \"РЖД\"",
+			"address": "Москва г, Шоссейная ул, д.43",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.677782, 37.725597],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 354-34-02, (495) 644-47-10/05",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.20"
+		}, {
+			"id": 133,
+			"name": "НУЗ \"ЦКБ No 2 ИМ.Н.А.СЕМАШКО ОАО \"РЖД\"",
+			"address": "Москва г, Будайская ул, д.2",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.831204, 37.668065],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 187-11-32",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.21"
+		}, {
+			"id": 134,
+			"name": "НУЗ \"ЦКБ No 2 им. Н.А. Семашко ОАО \"РЖД\"",
+			"address": "Москва г, Лосиноостровская ул, д.43",
+			"chain": "ОАО \"РЖД\"",
+			"coords": [55.8298529, 37.7260699],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 160-06-14-приемное",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.22"
+		}, {
+			"id": 135,
+			"name": "ФБУ \"ЦКБ ГРАЖДАНСКОЙ АВИАЦИИ\"",
+			"address": "Москва г, Иваньковское ш, д.7",
+			"chain": "",
+			"coords": [55.822599, 37.459504],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495)490-03-93,(495)490-01-17",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.23"
+		}, {
+			"id": 136,
+			"name": "ЦКБ РАН",
+			"address": "Москва г, Литовский б-р, д.1а",
+			"chain": "",
+			"coords": [55.614981, 37.527281],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 400-47-33- многоканальный;(495) 921-34-74",
+			"phones_home": "8499-137-08-85/79-32 с 08.00 до",
+			"phones_dental": "",
+			"position": "13.24"
+		}, {
+			"id": 138,
+			"name": "ГБУЗ \"ГКБ No24 ДЗМ\"",
+			"address": "Москва г, Писцовая ул, д.10",
+			"chain": "",
+			"coords": [55.798327, 37.578946],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8(495) 613-78-75; 8(495) 613-82-17",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.25"
+		}, {
+			"id": 139,
+			"name": "ГКБ No 67",
+			"address": "Москва г, Саляма Адиля ул, д.2/44",
+			"chain": "",
+			"coords": [55.772328, 37.46532],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "справочная (495) 530-33-97",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.26"
+		}, {
+			"id": 140,
+			"name": "ГБУЗ \"Городская клиническая больница им. С.П.Боткина ДЗМ\"",
+			"address": "Москва г, Достоевского ул, д.31/33",
+			"chain": "",
+			"coords": [55.7843546, 37.605565],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "8-499-978-46-00; 8-499-978-22-55 пост",
+			"phones_home": "",
+			"phones_dental": " 8-499-978-22-58;8-495-792-08-37",
+			"position": "13.27"
+		}, {
+			"id": 141,
+			"name": "ГБУЗ \"ГКБ No57 ДЗМ\"",
+			"address": "Москва г, Парковая 11-я ул, д.32",
+			"chain": "",
+			"coords": [55.798984, 37.806472],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495)465-70-22/28-13/83-11/95-81",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.28"
+		}, {
+			"id": 142,
+			"name": "ГБУЗ \" ГКБ No64 ДЗМ\"",
+			"address": "Москва г, Вавилова ул, д.61",
+			"chain": "",
+			"coords": [55.687442, 37.55798],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "пр.пок.(499)134-64-77тер.,/134-63-88хир./+7(499) 135-19-93-регистратура",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.29"
+		}, {
+			"id": 143,
+			"name": "ГБУЗ \"Городская клиническая больница имени М.Е.Жадкевича Департамента здравоохранения города Москвы",
+			"address": "Москва г, Можайское ш, д.14",
+			"chain": "",
+			"coords": [55.721992, 37.431113],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(499) 737-61-87",
+			"phones_home": "",
+			"phones_dental": "",
+			"position": "13.30"
+		}, {
+			"id": 145,
+			"name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХЦЕНТРОВ\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+			"address": "Москва г, Сергия Радонежского ул, д.5/2",
+			"chain": "\"Денто-Эль\"-\"Семейная\"",
+			"coords": [55.747192, 37.674055],
+			"home": false,
+			"dental": false,
+			"hospital": true,
+			"hours": "",
+			"phones": "(495) 662-58-85; (495) 678-03-63",
+			"phones_home": "(495) 678-03-63",
+			"phones_dental": " (495) 678-04-10",
+			"position": "13.32"
 		}];
 	}
 
 	exports.default = getClinics;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "data.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "data.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -20467,7 +22004,7 @@
 
 	exports.default = Map;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "map.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "map.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 162 */
@@ -20823,7 +22360,7 @@
 /* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -20967,13 +22504,13 @@
 
 	exports.default = Filters;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filters.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filters.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -21033,13 +22570,13 @@
 
 	exports.default = FilterCheckbox;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_checkbox.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_checkbox.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -21089,13 +22626,13 @@
 
 	exports.default = FilterAbstract;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_abstract.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_abstract.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -21155,13 +22692,13 @@
 
 	exports.default = FilterRadio;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_radio.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_radio.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -21309,7 +22846,7 @@
 
 	exports.default = YMaps;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ymaps.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ymaps.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 171 */
@@ -21355,7 +22892,7 @@
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -21409,6 +22946,14 @@
 						'ul',
 						{ className: 'list-group btn-group-vertical' },
 						this.props.clinics.map(function (clinic, i) {
+							var phones = clinic.phones;
+							if (clinic.home && clinic.phones_home.length) {
+								phones += "; вызов: " + clinic.phones_home;
+							}
+							if (clinic.dental && clinic.phones_dental.length) {
+								phones += "; стоматология: " + clinic.phones_dental;
+							}
+
 							return _react2.default.createElement(
 								'li',
 								{
@@ -21436,7 +22981,7 @@
 									_react2.default.createElement(
 										'div',
 										null,
-										clinic.phones
+										phones
 									)
 								)
 							);
@@ -21451,7 +22996,7 @@
 
 	exports.default = ClinicsList;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_list.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_list.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 174 */
