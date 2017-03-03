@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -94,7 +94,7 @@
 		function App(props) {
 			_classCallCheck(this, App);
 
-			var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(App).call(this, props));
 
 			_this.state = { clinics: _clinics.clinicsModel.getFiltered() };
 			return _this;
@@ -134,7 +134,7 @@
 							_react2.default.createElement(
 								"h4",
 								null,
-								"\u0424\u0438\u043B\u044C\u0442\u0440\u044B"
+								"Фильтры"
 							),
 							_react2.default.createElement(_filters2.default, { onChange: this.onFiltersChange.bind(this) })
 						),
@@ -144,7 +144,7 @@
 							_react2.default.createElement(
 								"h4",
 								null,
-								"\u041A\u043B\u0438\u043D\u0438\u043A\u0438 ",
+								"Клиники ",
 								_react2.default.createElement(
 									"span",
 									{ className: "badge" },
@@ -163,7 +163,7 @@
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.querySelector("#app"));
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "index.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 1 */
@@ -322,103 +322,14 @@
 /***/ function(module, exports) {
 
 	// shim for using process in browser
+
 	var process = module.exports = {};
-
-	// cached from whatever global is present so that test runners that stub it
-	// don't break things.  But we need to wrap it in a try catch in case it is
-	// wrapped in strict mode code which doesn't define any globals.  It's inside a
-	// function because try/catches deoptimize in certain engines.
-
-	var cachedSetTimeout;
-	var cachedClearTimeout;
-
-	function defaultSetTimout() {
-	    throw new Error('setTimeout has not been defined');
-	}
-	function defaultClearTimeout () {
-	    throw new Error('clearTimeout has not been defined');
-	}
-	(function () {
-	    try {
-	        if (typeof setTimeout === 'function') {
-	            cachedSetTimeout = setTimeout;
-	        } else {
-	            cachedSetTimeout = defaultSetTimout;
-	        }
-	    } catch (e) {
-	        cachedSetTimeout = defaultSetTimout;
-	    }
-	    try {
-	        if (typeof clearTimeout === 'function') {
-	            cachedClearTimeout = clearTimeout;
-	        } else {
-	            cachedClearTimeout = defaultClearTimeout;
-	        }
-	    } catch (e) {
-	        cachedClearTimeout = defaultClearTimeout;
-	    }
-	} ())
-	function runTimeout(fun) {
-	    if (cachedSetTimeout === setTimeout) {
-	        //normal enviroments in sane situations
-	        return setTimeout(fun, 0);
-	    }
-	    // if setTimeout wasn't available but was latter defined
-	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-	        cachedSetTimeout = setTimeout;
-	        return setTimeout(fun, 0);
-	    }
-	    try {
-	        // when when somebody has screwed with setTimeout but no I.E. maddness
-	        return cachedSetTimeout(fun, 0);
-	    } catch(e){
-	        try {
-	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-	            return cachedSetTimeout.call(null, fun, 0);
-	        } catch(e){
-	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-	            return cachedSetTimeout.call(this, fun, 0);
-	        }
-	    }
-
-
-	}
-	function runClearTimeout(marker) {
-	    if (cachedClearTimeout === clearTimeout) {
-	        //normal enviroments in sane situations
-	        return clearTimeout(marker);
-	    }
-	    // if clearTimeout wasn't available but was latter defined
-	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-	        cachedClearTimeout = clearTimeout;
-	        return clearTimeout(marker);
-	    }
-	    try {
-	        // when when somebody has screwed with setTimeout but no I.E. maddness
-	        return cachedClearTimeout(marker);
-	    } catch (e){
-	        try {
-	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-	            return cachedClearTimeout.call(null, marker);
-	        } catch (e){
-	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-	            return cachedClearTimeout.call(this, marker);
-	        }
-	    }
-
-
-
-	}
 	var queue = [];
 	var draining = false;
 	var currentQueue;
 	var queueIndex = -1;
 
 	function cleanUpNextTick() {
-	    if (!draining || !currentQueue) {
-	        return;
-	    }
 	    draining = false;
 	    if (currentQueue.length) {
 	        queue = currentQueue.concat(queue);
@@ -434,7 +345,7 @@
 	    if (draining) {
 	        return;
 	    }
-	    var timeout = runTimeout(cleanUpNextTick);
+	    var timeout = setTimeout(cleanUpNextTick);
 	    draining = true;
 
 	    var len = queue.length;
@@ -451,7 +362,7 @@
 	    }
 	    currentQueue = null;
 	    draining = false;
-	    runClearTimeout(timeout);
+	    clearTimeout(timeout);
 	}
 
 	process.nextTick = function (fun) {
@@ -463,7 +374,7 @@
 	    }
 	    queue.push(new Item(fun, args));
 	    if (queue.length === 1 && !draining) {
-	        runTimeout(drainQueue);
+	        setTimeout(drainQueue, 0);
 	    }
 	};
 
@@ -19859,7 +19770,7 @@
 /* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -19943,7 +19854,7 @@
 			value: function updateFilters() {
 				var _this = this;
 
-				var newFilters = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+				var newFilters = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 				var checkedFilters = {};
 				Object.keys(newFilters).forEach(function (key) {
@@ -20003,7 +19914,7 @@
 		}, {
 			key: '_generateFilter',
 			value: function _generateFilter(key, value, type) {
-				var label = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : value;
+				var label = arguments.length <= 3 || arguments[3] === undefined ? value : arguments[3];
 
 				return {
 					key: key,
@@ -20036,7 +19947,7 @@
 		_createClass(ClinicsModel, [{
 			key: 'filter',
 			value: function filter() {
-				var keyValues = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+				var keyValues = arguments.length <= 0 || arguments[0] === undefined ? {} : arguments[0];
 
 				var filtered = (0, _data2.default)();
 				var keys = keyValues && Object.keys(keyValues);
@@ -20063,13 +19974,13 @@
 
 	var clinicsModel = exports.clinicsModel = new ClinicsModel();
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -20512,7 +20423,7 @@
 			"phones_dental": " (495) 788-18-17",
 			"position": "6.14"
 		}, {
-			"id": 35,
+			"id": 34,
 			"name": "ООО \"ОН КЛИНИК\"",
 			"address": "Москва г, Зубовский б-р, д.35, корп.стр 1",
 			"chain": "\"ОН КЛИНИК\"",
@@ -22042,13 +21953,13 @@
 
 	exports.default = getClinics;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "data.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "data.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -22078,7 +21989,7 @@
 		function Map() {
 			_classCallCheck(this, Map);
 
-			return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(Map).apply(this, arguments));
 		}
 
 		_createClass(Map, [{
@@ -22093,7 +22004,7 @@
 
 	exports.default = Map;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "map.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "map.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 162 */
@@ -22449,7 +22360,7 @@
 /* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -22495,7 +22406,7 @@
 		function Filters(props) {
 			_classCallCheck(this, Filters);
 
-			var _this = _possibleConstructorReturn(this, (Filters.__proto__ || Object.getPrototypeOf(Filters)).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Filters).call(this, props));
 
 			_this.state = { filterSets: _clinics.clinicsModel.availableFilters.getFilterSets() };
 			return _this;
@@ -22580,7 +22491,7 @@
 									onClick: this.onFiltersReset.bind(this),
 									className: 'btn btn-default'
 								},
-								'\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u0432\u0441\u0435 \u0444\u0438\u043B\u044C\u0442\u0440\u044B'
+								'Сбросить все фильтры'
 							)
 						)
 					)
@@ -22593,13 +22504,13 @@
 
 	exports.default = Filters;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filters.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filters.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -22631,7 +22542,7 @@
 		function FilterCheckbox() {
 			_classCallCheck(this, FilterCheckbox);
 
-			return _possibleConstructorReturn(this, (FilterCheckbox.__proto__ || Object.getPrototypeOf(FilterCheckbox)).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(FilterCheckbox).apply(this, arguments));
 		}
 
 		_createClass(FilterCheckbox, [{
@@ -22659,13 +22570,13 @@
 
 	exports.default = FilterCheckbox;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_checkbox.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_checkbox.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -22693,7 +22604,7 @@
 		function FilterAbstract(props) {
 			_classCallCheck(this, FilterAbstract);
 
-			var _this = _possibleConstructorReturn(this, (FilterAbstract.__proto__ || Object.getPrototypeOf(FilterAbstract)).call(this, props));
+			var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(FilterAbstract).call(this, props));
 
 			_this.state = { filter: _this.props.filter || {} };
 			return _this;
@@ -22715,13 +22626,13 @@
 
 	exports.default = FilterAbstract;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_abstract.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_abstract.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -22753,7 +22664,7 @@
 		function FilterRadio() {
 			_classCallCheck(this, FilterRadio);
 
-			return _possibleConstructorReturn(this, (FilterRadio.__proto__ || Object.getPrototypeOf(FilterRadio)).apply(this, arguments));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(FilterRadio).apply(this, arguments));
 		}
 
 		_createClass(FilterRadio, [{
@@ -22781,13 +22692,13 @@
 
 	exports.default = FilterRadio;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_radio.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "filter_radio.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	"use strict";
 
@@ -22805,7 +22716,6 @@
 		};
 	}(); //import getClinics from './clinics_data.js';
 
-
 	var _clinics = __webpack_require__(159);
 
 	function _classCallCheck(instance, Constructor) {
@@ -22816,7 +22726,7 @@
 
 	ymaps.ready(init);
 
-	var myMap = void 0;
+	var myMap = undefined;
 
 	function init() {
 		myMap = new ymaps.Map("map", {
@@ -22936,7 +22846,7 @@
 
 	exports.default = YMaps;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ymaps.js" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "ymaps.js" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 171 */
@@ -22982,7 +22892,7 @@
 /* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
+	/* REACT HOT LOADER */ if (false) { (function () { var ReactHotAPI = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-api/modules/index.js"), RootInstanceProvider = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/RootInstanceProvider.js"), ReactMount = require("react/lib/ReactMount"), React = require("react"); module.makeHot = module.hot.data ? module.hot.data.makeHot : ReactHotAPI(function () { return RootInstanceProvider.getRootInstances(ReactMount); }, React); })(); } (function () {
 
 	'use strict';
 
@@ -23016,7 +22926,7 @@
 		function ClinicsList(props) {
 			_classCallCheck(this, ClinicsList);
 
-			return _possibleConstructorReturn(this, (ClinicsList.__proto__ || Object.getPrototypeOf(ClinicsList)).call(this, props));
+			return _possibleConstructorReturn(this, Object.getPrototypeOf(ClinicsList).call(this, props));
 		}
 
 		_createClass(ClinicsList, [{
@@ -23086,7 +22996,7 @@
 
 	exports.default = ClinicsList;
 
-	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/lzd_cllinics/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_list.jsx" + ": " + err.message); } }); } } })(); }
+	/* REACT HOT LOADER */ }).call(this); if (false) { (function () { module.hot.dispose(function (data) { data.makeHot = module.makeHot; }); if (module.exports && module.makeHot) { var makeExportsHot = require("/Users/bullgare/projects/hobby/lzd_clinics2/node_modules/react-hot-loader/makeExportsHot.js"), foundReactClasses = false; if (makeExportsHot(module, require("react"))) { foundReactClasses = true; } var shouldAcceptModule = true && foundReactClasses; if (shouldAcceptModule) { module.hot.accept(function (err) { if (err) { console.error("Cannot not apply hot update to " + "clinics_list.jsx" + ": " + err.message); } }); } } })(); }
 
 /***/ },
 /* 174 */
