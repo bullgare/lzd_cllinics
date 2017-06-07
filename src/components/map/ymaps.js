@@ -38,10 +38,15 @@ function addObjects(clinics) {
 			color = '#735184';
 		}
 
+		let preset = 'islands#medicalIcon';
+		if (clinic.is_for_kids) {
+			preset = 'islands#familyIcon';
+		}
+
 		let placemark = new ymaps.Placemark(clinic.coords, {
 			balloonContent: generateContentForMarker(clinic)
 		}, {
-			preset: 'islands#dotIcon',
+			preset: preset,
 			iconColor: color
 		});
 		placemarksByIds[clinic.id] = placemark;
@@ -67,6 +72,9 @@ function generateContentForMarker(clinic) {
 	}
 
 	content += '<dl class="dl-horizontal">';
+    if (clinic.is_for_kids) {
+        content += '<dt>Для детей</dt><dd></dd>\n';
+    }
 	if (clinic.phones) {
 		content += '<dt>Телефоны</dt><dd>' + clinic.phones + '</dd>\n';
 	}

@@ -1,34 +1,42 @@
 package main
 
 import (
-	"io/ioutil"
-	"strings"
+	"encoding/json"
 	"flag"
 	"fmt"
+	"io/ioutil"
+	"log"
+	"net/http"
 	"regexp"
-	"encoding/json"
+	"strconv"
+	"strings"
 )
 
-var filepath string
+var (
+	filepath     string
+	patientsType string
+)
 
 type Clinics struct {
-	ID		int		`json:"id"`
-	Name		string		`json:"name"`
-	Address		string		`json:"address"`
-	Chain		string		`json:"chain"`
-	Coords		[]float64	`json:"coords"`
-	Home		bool		`json:"home"`
-	Dental		bool		`json:"dental"`
-	Hours		string		`json:"hours"`
-	Phones		string		`json:"phones"`
-	PhonesHome	string		`json:"phones_home"`
-	PhonesDental	string		`json:"phones_dental"`
-	Position	string		`json:"position"`
+	ID           int       `json:"id"`
+	Name         string    `json:"name"`
+	Address      string    `json:"address"`
+	Chain        string    `json:"chain"`
+	Coords       []float64 `json:"coords"`
+	Home         bool      `json:"home"`
+	Dental       bool      `json:"dental"`
+	IsHospital   bool      `json:"is_hospital"`
+	IsForKids    bool      `json:"is_for_kids"`
+	Hours        string    `json:"hours"`
+	Phones       string    `json:"phones"`
+	PhonesHome   string    `json:"phones_home"`
+	PhonesDental string    `json:"phones_dental"`
+	Position     string    `json:"position"`
 }
 
 func init() {
-	// example with short version for long flag
 	flag.StringVar(&filepath, "path", "", "file path")
+	flag.StringVar(&patientsType, "patients", "adults", "write `kids` for kids")
 }
 
 func main() {
@@ -41,38 +49,56 @@ func main() {
 	}
 
 	clinicsDescs := linesToClinicsDesc(lines)
+	errs := make([]error, 0)
 
 	var clinics []Clinics
+	l := len(clinicsDescs)
 	for i, cd := range clinicsDescs {
-		c := parse(cd, i)
+		c, err := parse(cd, i)
 		if len(c.Address) > 0 {
 			clinics = append(clinics, c)
 		}
+		if err != nil {
+			errs = append(errs, err)
+		}
+		log.Printf("%d/%d\n", i+1, l)
 	}
 
 	js, err := json.Marshal(clinics)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
-	// @debug
-	fmt.Printf("\n\n------bububu: %s\n\n", js)
+	fmt.Printf("\n\n%s\n\n", js)
+
+	if len(errs) > 0 {
+		log.Fatalf("Errors (%d): %v", len(errs), errs)
+	} else {
+		log.Print("Worked fine, no errors")
+	}
 }
 
 var (
 	rePosition = regexp.MustCompile(`^\d+\.\d+`)
-	reName = regexp.MustCompile(`^\d+\.\d+\.(.*?)Адрес:`)
-	reAddr = regexp.MustCompile(`Адрес: [\s,\d]+? (.*?)Телефон`)
-	rePhone = regexp.MustCompile(`Телефон регистратуры:(.*)`)
-	rePhoneHome = regexp.MustCompile(`Телефон вызова врача на дом:(.*)`)
+	reName     = regexp.MustCompile(`^\d+\.\d+\.(.*?)Адрес:`)
+	reAddr     = regexp.MustCompile(`Адрес: [\s,\d]*? ?(.*?)(Телефон|$)`)
+
+	rePhone       = regexp.MustCompile(`Телефон регистратуры:(.*)`)
+	rePhoneHome   = regexp.MustCompile(`Телефон вызова врача на дом:(.*)`)
 	rePhoneDental = regexp.MustCompile(`Телефон стоматологии:(.*)`)
 )
 
-func parse(in string, i int) Clinics {
+func parse(in string, i int) (Clinics, error) {
 	var c Clinics
 	var matches []string
 
+	c.IsForKids = (patientsType == "kids")
+
 	c.ID = i
-	c.Position = rePosition.FindString(in)
+	if c.IsForKids {
+		c.ID = i + 200
+	}
+
+	c.Position = rePosition.FindString(in) + "." + patientsType
 	if matches = reName.FindStringSubmatch(in); len(matches) > 0 {
 		c.Name = strings.TrimSpace(matches[1])
 	}
@@ -91,7 +117,6 @@ func parse(in string, i int) Clinics {
 		c.Phones = strings.TrimSuffix(c.Phones, matches[0])
 	}
 
-
 	if matches = rePhoneHome.FindStringSubmatch(in); len(matches) > 0 {
 		c.PhonesHome = strings.TrimSpace(matches[1])
 	}
@@ -103,11 +128,31 @@ func parse(in string, i int) Clinics {
 		c.PhonesDental = matches[1]
 	}
 
-	switch string([]rune(c.Position)[0])+string([]rune(c.Position)[1]) {
+	if c.IsForKids {
+		setParamsByPositionKids(&c, string([]rune(c.Position)[0])+string([]rune(c.Position)[1]))
+	} else {
+		setParamsByPosition(&c, string([]rune(c.Position)[0])+string([]rune(c.Position)[1]))
+	}
+
+	coords, err := GetCoordsForAddress(c.Address)
+	if err != nil {
+		return c, fmt.Errorf("could not get coords for position %s", c.Position)
+	} else {
+		c.Coords = coords
+	}
+
+	return c, nil
+}
+
+// usual clinics - for adults
+func setParamsByPosition(c *Clinics, position string) {
+	switch position {
 	case "1.":
-		c.Home = true
+	// nothing is provided
+	case "2.":
+	// nothing is provided
 	case "3.":
-		// nothing is provided
+		c.Home = true
 	case "4.":
 		c.Home = true
 	case "5.":
@@ -126,18 +171,53 @@ func parse(in string, i int) Clinics {
 		c.Home = true
 		c.Dental = true
 	case "12":
+		c.Home = true
 		c.Dental = true
 	case "13":
+	// nothing is provided
+	case "14":
+		c.Dental = true
+	case "15":
+		c.IsHospital = true
+	}
+}
+func setParamsByPositionKids(c *Clinics, position string) {
+	switch position {
+	case "1.":
+	// nothing is provided
+	case "2.":
+		c.Home = true
+	case "3.":
+		c.Home = true
+	case "4.":
+		c.Home = true
+		c.Dental = true
+	case "5.":
+		c.Home = true
+		c.Dental = true
+	case "6.":
+		c.Home = true
+		c.Dental = true
+	case "7.":
+		c.Home = true
+		c.Dental = true
+	case "8.":
+		c.Home = true
+		c.Dental = true
+	case "9.":
+		c.Home = true
+		c.Dental = true
+	case "10":
+	// nothing is provided
+	case "11":
 		// nothing is provided
 	}
-
-	return c
 }
 
 func readLines(path string) ([]string, error) {
 	content, err := ioutil.ReadFile(path)
 	if err != nil {
-		return nil, fmt.Errorf("Cannot read file `%s`", path)
+		return nil, fmt.Errorf("cannot read file `%s`", path)
 	}
 	return strings.Split(string(content), "\n"), nil
 }
@@ -172,4 +252,55 @@ func linesToClinicsDesc(in []string) []string {
 	}
 
 	return out
+}
+
+//=============================================================================================
+type Coords struct {
+	coords []float64
+}
+
+var rePosInJSON = regexp.MustCompile(`"pos":"([\d\. ]+)"`)
+
+func (c *Coords) UnmarshalJSON(data []byte) error {
+	str := string(data)
+	matches := rePosInJSON.FindStringSubmatch(str)
+	if len(matches) != 2 {
+		return fmt.Errorf("should have 1 `pos` in json, got %d: %v", len(matches)-1, matches)
+	}
+	coords := strings.Split(matches[1], " ")
+	if len(coords) != 2 {
+		return fmt.Errorf("should have 2 coords, got %d (%s)", len(coords)-1, matches[1])
+	}
+	lat, err := strconv.ParseFloat(coords[1], 64)
+	if err != nil {
+		return fmt.Errorf("lat (%s) is not a float64", coords[1])
+	}
+	lng, err := strconv.ParseFloat(coords[0], 64)
+	if err != nil {
+		return fmt.Errorf("lng (%s) is not a float64", coords[0])
+	}
+	c.coords = []float64{lat, lng}
+	return nil
+}
+
+var yaURL = "https://geocode-maps.yandex.ru/1.x/?format=json&geocode="
+
+func GetCoordsForAddress(addr string) ([]float64, error) {
+	resp, err := http.Get(yaURL + addr)
+	if err != nil {
+		return nil, err
+	}
+	defer resp.Body.Close()
+	body, err := ioutil.ReadAll(resp.Body)
+	if err != nil {
+		return nil, err
+	}
+
+	c := &Coords{}
+	if err = json.Unmarshal(body, &c); err != nil {
+		return nil, fmt.Errorf("unmarshal error for %s: %s", addr, err)
+	}
+	//// @debug
+	//fmt.Printf("\n\n------bububu: %s -> %s; %s\n\n", yaURL + addr, body, c.coords)
+	return c.coords, nil
 }

@@ -82,7 +82,7 @@ class AvailableFilters {
 
 		filterSets[0].filters.push(this._generateFilter('home', true, 'checkbox', 'Вызов на дом'));
 		filterSets[0].filters.push(this._generateFilter('dental', true, 'checkbox', 'Стоматология'));
-		filterSets[0].filters.push(this._generateFilter('hospital', true, 'checkbox', 'Стационар'));
+		filterSets[0].filters.push(this._generateFilter('is_hospital', true, 'checkbox', 'Стационар'));
 
 		chains.forEach((chain) => {
 			filterSets[1].filters.push(this._generateFilter('chain', chain.value, 'radio', chain.label));

@@ -1,0 +1,1029 @@
+[
+  {
+    "id": 200,
+    "name": "ФГБУЗ ЦДКБ ФМБА РОССИИ",
+    "address": "115409, Москва г, Москворечье ул, д.20",
+    "chain": "",
+    "coords": [
+      55.641188,
+      37.669127
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499)324-22-30, (495)742-91-40/81-40",
+    "phones_home": "(499)324-22-30, (495)742-91-40/81-40",
+    "phones_dental": " (499)324-69-76, (495)742-91-40",
+    "position": "2.1.kids"
+  },
+  {
+    "id": 201,
+    "name": "Сеть медицинских клиник \"ИММА.РУ\" - ООО \"МЕДИЦИНСКИЕ ЦЕНТРЫ-4\"",
+    "address": "119602, Москва г, Никулинская ул, д.5",
+    "chain": "",
+    "coords": [
+      55.666442,
+      37.455543
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "495-644-11-14",
+    "phones_home": "495-644-11-14",
+    "phones_dental": "",
+    "position": "2.2.kids"
+  },
+  {
+    "id": 202,
+    "name": "ООО \"ДЕНТО-ЭЛЬ-ЛИДЕР\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+    "address": "125565, Москва г, Фестивальная ул, д.4",
+    "chain": "",
+    "coords": [
+      55.856573,
+      37.485268
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499)195-41-90, (495) 451-92-62",
+    "phones_home": "",
+    "phones_dental": " (495) 451-92-62",
+    "position": "2.3.kids"
+  },
+  {
+    "id": 203,
+    "name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\"",
+    "address": "105043, Москва г, Первомайская ул, д.42",
+    "chain": "",
+    "coords": [
+      55.792265,
+      37.787111
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "8(499)701-98-83, 8(499)290-33-70",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "2.4.kids"
+  },
+  {
+    "id": 204,
+    "name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+    "address": "123007, Москва г, Хорошевское ш, д.80",
+    "chain": "",
+    "coords": [
+      55.778512,
+      37.522881
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 662-58-85; (499)195-41-90; (499)-735-21-12 (взрослые и дети) ",
+    "phones_home": "(499)195-41-90; (499)-735-21-12",
+    "phones_dental": " (499)195-41-88; (499)-195-89-27",
+    "position": "2.5.kids"
+  },
+  {
+    "id": 205,
+    "name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+    "address": "119333, Москва г, Университетский пр-кт, д.4",
+    "chain": "",
+    "coords": [
+      55.697067,
+      37.55381
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 662-58-85; (499)134-25-77; (499)137-77-71",
+    "phones_home": "(499)134-25-77; (499)137-77-71",
+    "phones_dental": " (499)134-25-77; (499)137-77-71",
+    "position": "2.6.kids"
+  },
+  {
+    "id": 206,
+    "name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+    "address": "125480, Москва г, Героев-Панфиловцев ул, д.1",
+    "chain": "",
+    "coords": [
+      55.853173,
+      37.437972
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 662-58-85; (495)-496-60-12; (495)-496-99-10",
+    "phones_home": "495)-496-60-12; (495)-496-99-10",
+    "phones_dental": " 495)-496-60-12; (495)-496-99-10",
+    "position": "2.7.kids"
+  },
+  {
+    "id": 207,
+    "name": "ООО \"СЕТЬ СЕМЕЙНЫХ МЕДИЦИНСКИХ ЦЕНТРОВ\" (Сеть клиник \"Денто-Эль\"-\"Семейная\")",
+    "address": "115230, Москва г, Каширское ш, д.56",
+    "chain": "",
+    "coords": [
+      55.645547,
+      37.670717
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 662-58-85; (495)324-42-44; (495) 324-15-13; (495) 324-25-22",
+    "phones_home": "(495)324-42-44;(495) 324-15-13; (495) 324-25-22",
+    "phones_dental": "",
+    "position": "2.8.kids"
+  },
+  {
+    "id": 208,
+    "name": "ООО \"ПРОГРЕСС-МЕД\"",
+    "address": "127473, Москва г, Селезневская ул, д.32",
+    "chain": "",
+    "coords": [
+      55.780876,
+      37.611931
+    ],
+    "home": true,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 781-90-01",
+    "phones_home": "(495) 781-06-81,(916) 058-17-75 Внимание! Возможно закрытие больничных листов на дому при отсутствии медицинских противопоказаний",
+    "phones_dental": "",
+    "position": "3.1.kids"
+  },
+  {
+    "id": 209,
+    "name": "ООО \"МЕДИНА\"",
+    "address": "140108, Московская обл, Раменский р-н, Раменское г, Михалевича ул, д.49а",
+    "chain": "",
+    "coords": [
+      55.561156,
+      38.249331
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 109-03-30 (496) 461-00-63, (496) 461-61-42",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "4.1.kids"
+  },
+  {
+    "id": 210,
+    "name": "ООО \"Семейная поликлиника No 4\" - Сеть семейных поликлиник",
+    "address": "141060, Московская обл, Королев г, Станционная ул, д.33",
+    "chain": "",
+    "coords": [
+      55.932037,
+      37.858815
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "+7 (800) 555-09-09, (495) 988-50-13, (495) 510-57-30",
+    "phones_home": "+7 (800) 555-09-09 - вызов врача на дом с 8:00 до 12:00",
+    "phones_dental": "",
+    "position": "4.2.kids"
+  },
+  {
+    "id": 211,
+    "name": "АО \"Детская поликлиника Литфонда\"",
+    "address": "125319, Москва г, Красноармейская ул, д.23а",
+    "chain": "",
+    "coords": [
+      55.802042,
+      37.535385
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499) 152-80-32",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "5.1.kids"
+  },
+  {
+    "id": 212,
+    "name": "Сеть медицинских клиник \"ИММА.РУ\" - ООО \"МЕДИЦИНСКИЕ ЦЕНТРЫ-3\"",
+    "address": "125466, Москва г, Родионовская ул, д.2",
+    "chain": "",
+    "coords": [
+      55.894606,
+      37.400072
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "495-660-30-90",
+    "phones_home": "(495) 745-36-63 - до 13 часов. (495) 660-30-90 - до 13 часов ",
+    "phones_dental": " 495-660-30-90",
+    "position": "6.1.kids"
+  },
+  {
+    "id": 213,
+    "name": "ООО \"АЛМ Медицина\"",
+    "address": "117418, Москва г, Новочеремушкинская ул, д.55, корп.2",
+    "chain": "",
+    "coords": [
+      55.670767,
+      37.569854
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 640-43-03",
+    "phones_home": "(495) 640-43-03",
+    "phones_dental": " (495) 640-43-03",
+    "position": "7.1.kids"
+  },
+  {
+    "id": 214,
+    "name": "Сеть медицинских клиник \"ИММА.РУ\" - ООО \"ИММА-1\"",
+    "address": "109341, Москва г, Перерва ул, д.39",
+    "chain": "",
+    "coords": [
+      55.659195,
+      37.746472
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 787-26-46",
+    "phones_home": "(495) 787-26-46",
+    "phones_dental": "",
+    "position": "7.2.kids"
+  },
+  {
+    "id": 215,
+    "name": "Сеть медицинских клиник \"ИММА.РУ\" - ООО \"Медицинские центры-5\"",
+    "address": "123592, Москва г, Маршала Катукова ул, д.24, корп.5",
+    "chain": "",
+    "coords": [
+      55.803044,
+      37.413197
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 536-19-99 многоканальный",
+    "phones_home": "(495) 536-19-99 многоканальный",
+    "phones_dental": " (495) 536-19-99 многоканальный",
+    "position": "7.3.kids"
+  },
+  {
+    "id": 216,
+    "name": "ООО Клиника \"Креде Эксперто\"",
+    "address": "109004, Москва г, Товарищеский пер, д.10",
+    "chain": "",
+    "coords": [
+      55.742306,
+      37.662344
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 232-48-40",
+    "phones_home": "",
+    "phones_dental": " 232-48-40(41,42,43)",
+    "position": "7.4.kids"
+  },
+  {
+    "id": 217,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "Москва г, Профсоюзная ул, д.127, корп.Б",
+    "chain": "",
+    "coords": [
+      55.620647,
+      37.507592
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.5.kids"
+  },
+  {
+    "id": 218,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "129110, Москва г, Орлово-Давыдовский пер, д.8",
+    "chain": "",
+    "coords": [
+      55.78319,
+      37.64056
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.6.kids"
+  },
+  {
+    "id": 219,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "123242, Москва г, Баррикадная ул, д.19",
+    "chain": "",
+    "coords": [
+      55.760302,
+      37.579771
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "780-07-71,780-07-73",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.7.kids"
+  },
+  {
+    "id": 220,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "125493, Москва г, Флотская ул, д.5а",
+    "chain": "",
+    "coords": [
+      55.853097,
+      37.49241
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.8.kids"
+  },
+  {
+    "id": 221,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "117519, Москва г, Варшавское ш, д.148",
+    "chain": "",
+    "coords": [
+      55.60102,
+      37.602579
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.9.kids"
+  },
+  {
+    "id": 222,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "105005, Москва г, Бакунинская ул, д.1-3",
+    "chain": "",
+    "coords": [
+      55.77355,
+      37.678963
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.10.kids"
+  },
+  {
+    "id": 223,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "Москва г, Маршала Тухачевского ул, д.37/21",
+    "chain": "",
+    "coords": [
+      55.783853,
+      37.470922
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.11.kids"
+  },
+  {
+    "id": 224,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "121353, Москва г, Можайское ш, д.45А",
+    "chain": "",
+    "coords": [
+      55.716478,
+      37.407699
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.12.kids"
+  },
+  {
+    "id": 225,
+    "name": "АО \"Семейный доктор\"",
+    "address": "115054, Москва г, Монетчиковский 3-й пер, д.16, корп.1",
+    "chain": "",
+    "coords": [
+      55.731059,
+      37.629268
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.13.kids"
+  },
+  {
+    "id": 226,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "Москва г, Братиславская ул, д.23",
+    "chain": "",
+    "coords": [
+      55.655965,
+      37.76424
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.14.kids"
+  },
+  {
+    "id": 227,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "127642, Москва г, Дежнева проезд, д.1",
+    "chain": "",
+    "coords": [
+      55.871183,
+      37.649759
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.15.kids"
+  },
+  {
+    "id": 228,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "Москва г, Добролюбова ул, д.14А",
+    "chain": "",
+    "coords": [
+      55.815362,
+      37.595429
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.16.kids"
+  },
+  {
+    "id": 229,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "117447, Москва г, Севастопольский пр-кт, д.10",
+    "chain": "",
+    "coords": [
+      55.688502,
+      37.60187
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.17.kids"
+  },
+  {
+    "id": 230,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "115563, Москва г, Борисовский проезд, д.19а",
+    "chain": "",
+    "coords": [
+      55.624317,
+      37.728263
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.18.kids"
+  },
+  {
+    "id": 231,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "119192, Москва г, Мичуринский пр-кт, д.34",
+    "chain": "",
+    "coords": [
+      55.698285,
+      37.497872
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.19.kids"
+  },
+  {
+    "id": 232,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "123154, Москва г, Генерала Карбышева б-р, д.13, корп.1",
+    "chain": "",
+    "coords": [
+      55.781236,
+      37.469611
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.20.kids"
+  },
+  {
+    "id": 233,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "117546, Москва г, Медынская ул, д.9",
+    "chain": "",
+    "coords": [
+      55.582594,
+      37.649274
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.21.kids"
+  },
+  {
+    "id": 234,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "105203, Москва г, Первомайская Ниж. ул, д.43а",
+    "chain": "",
+    "coords": [
+      55.791461,
+      37.807297
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "780-07-71,780-07-73",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.22.kids"
+  },
+  {
+    "id": 235,
+    "name": "АО \"СЕМЕЙНЫЙ ДОКТОР\"",
+    "address": "117420, Москва г, Воронцовская ул, д.19а",
+    "chain": "",
+    "coords": [
+      55.737831,
+      37.65832
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-07-71",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "7.23.kids"
+  },
+  {
+    "id": 236,
+    "name": "МЧУ \"МЦ \"Рамбам\"",
+    "address": "127018, Москва г, Образцова ул, д.11",
+    "chain": "",
+    "coords": [
+      55.789654,
+      37.60947
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 663-23-55. (495) 627-71-00 ",
+    "phones_home": "",
+    "phones_dental": " 663-23-55",
+    "position": "7.24.kids"
+  },
+  {
+    "id": 237,
+    "name": "КЛИНИКА \"МЕДСИ\" В ЩЕЛКОВО (АО \"Группа компаний \"Медси\")",
+    "address": "141100, Московская обл, Щелковский р-н, Щелково г, Комсомольская ул, д.5",
+    "chain": "",
+    "coords": [
+      55.929182,
+      37.993706
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-05-00",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "8.1.kids"
+  },
+  {
+    "id": 238,
+    "name": "КЛИНИКА \"МЕДСИ\" В КРАСНОГОРСКЕ (АО \"Группа компаний \"Медси\")",
+    "address": "143408, Московская обл, Красногорский р-н, Красногорск г, Успенская ул, д.5",
+    "chain": "",
+    "coords": [
+      55.833354,
+      37.290972
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 228-08-03 495-7-800-500",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "8.2.kids"
+  },
+  {
+    "id": 239,
+    "name": "КЛИНИКА \"МЕДСИ\" В БУТОВО (АО \"Группа компаний \"Медси\")",
+    "address": "117216, Москва г, Старокачаловская ул, д.3",
+    "chain": "",
+    "coords": [
+      55.568527,
+      37.582412
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 780-05-00",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "8.3.kids"
+  },
+  {
+    "id": 240,
+    "name": "ДЕТСКАЯ КЛИНИКА АО \"Группа компаний \"МЕДСИ\"",
+    "address": "123001, Москва г, Благовещенский пер, д.2/16, корп.1",
+    "chain": "",
+    "coords": [
+      55.766162,
+      37.596642
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "7 495 223 70-56 (495) 223-52-05 (495) 228-08-037 495 699 61-14 - для СК - согласование услуг.",
+    "phones_home": "7 495 699 90-31 - вызов врача на дом",
+    "phones_dental": " ( (495) 223-52-05 - многоканальный. (495) 223-52-06. (495) 228-08-03.",
+    "position": "8.4.kids"
+  },
+  {
+    "id": 241,
+    "name": "КЛИНИКА \"МЕДСИ\" В МАРЬИНО (АО \"Группа компаний \"Медси\")",
+    "address": "109652, Москва г, Маршала Голованова ул, д.1, корп.2",
+    "chain": "",
+    "coords": [
+      55.650323,
+      37.731236
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 228-08-03 495 7-800-500",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "8.5.kids"
+  },
+  {
+    "id": 242,
+    "name": "КЛИНИКА \"МЕДСИ\" В МИТИНО (АО \"Группа компаний \"Медси\")",
+    "address": "125430, Москва г, Пятницкое ш, д.37",
+    "chain": "",
+    "coords": [
+      55.854249,
+      37.357402
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": ". (495) 223-52-06. (495) 794-73-08 495-7-800-500",
+    "phones_home": "",
+    "phones_dental": " 751-03-29,794-73-08",
+    "position": "8.6.kids"
+  },
+  {
+    "id": 243,
+    "name": "ООО \"ВЕРАМЕД\"",
+    "address": "143180, Московская обл, Звенигород г, Московская ул, д.12",
+    "chain": "",
+    "coords": [
+      55.730056,
+      36.85325
+    ],
+    "home": true,
+    "dental": true,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "495 150-03-03",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "9.1.kids"
+  },
+  {
+    "id": 244,
+    "name": "ЛАБОРАТОРИЯ МОЛЕКУЛЯРНОЙ ДИАГНОСТИКИ ООО \"НПФ \"ХЕЛИКС\"",
+    "address": "107376, Санкт-Петербург г, Реки Карповки наб, д.5л",
+    "chain": "",
+    "coords": [
+      59.968137,
+      30.316263
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(812) 309-12-21",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "10.1.kids"
+  },
+  {
+    "id": 245,
+    "name": "ООО \"НЕЗАВИСИМАЯ ЛАБОРАТОРИЯ ИНВИТРО\"",
+    "address": "125047, Москва г, Тверская-Ямская 4-Я ул, д.20",
+    "chain": "",
+    "coords": [
+      55.773894,
+      37.595007
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(800) 200-363-0",
+    "phones_home": "(800) 200-363-0",
+    "phones_dental": "",
+    "position": "10.2.kids"
+  },
+  {
+    "id": 246,
+    "name": "ООО \"МЦ КОНСИЛИУМ\" (при МОРОЗОВСКОЙ ДГКБ)",
+    "address": "119049, Москва г, Добрынинский 4-й пер, д.1",
+    "chain": "",
+    "coords": [
+      55.724996,
+      37.617339
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "8(495)959-88-03; для записи- 8 966-151-80-80",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.1.kids"
+  },
+  {
+    "id": 247,
+    "name": "ФГБУ \"РДКБ\" Минздрава России",
+    "address": "117513, Москва г, Ленинский пр-кт, д.117",
+    "chain": "",
+    "coords": [
+      55.650724,
+      37.492635
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495) 936-92-30/91-30",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.2.kids"
+  },
+  {
+    "id": 248,
+    "name": "ФГБУ \"Клиническая больница\" УДП РФ",
+    "address": "107150, Москва г, Лосиноостровская ул, д.45",
+    "chain": "",
+    "coords": [
+      55.83523,
+      37.742052
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "8499-167-03-94(05-82,05-88,05-90дет))",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.3.kids"
+  },
+  {
+    "id": 249,
+    "name": "ФГБУ \"ЦКБ с поликлиникой\" УДП РФ",
+    "address": "121359, Москва г, Маршала Тимошенко ул, д.15",
+    "chain": "",
+    "coords": [
+      55.749456,
+      37.389849
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(495)530-00-95/07-03/08-74/05-65",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.4.kids"
+  },
+  {
+    "id": 250,
+    "name": "ГБУЗ \"ДГКБ No 9 ИМ.Г.Н.СПЕРАНСКОГО ДЗМ\"",
+    "address": "123317, Москва г, Шмитовский проезд, д.29",
+    "chain": "",
+    "coords": [
+      55.755246,
+      37.539185
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499) 259-13-07. (499) 259-01-08",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.5.kids"
+  },
+  {
+    "id": 251,
+    "name": "ФГБУЗ ЦДКБ ФМБА РОССИИ",
+    "address": "115409, Москва г, Москворечье ул, д.20",
+    "chain": "",
+    "coords": [
+      55.641188,
+      37.669127
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499)324-22-30, (495)742-91-40/81-40",
+    "phones_home": "(499)324-22-30, (495)742-91-40/81-40",
+    "phones_dental": " (499)324-69-76, (495)742-91-40",
+    "position": "11.6.kids"
+  },
+  {
+    "id": 252,
+    "name": "ФГАУ ННПЦЗД\" Минздрава России",
+    "address": "119991 МОСКВА ЛОМОНОСОВСКИЙ ПР-Т 2\\1",
+    "chain": "",
+    "coords": [
+      55.68534,
+      37.55116
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "(499) 134-01-73; (499) 134-09-23, (495) 967-14-20",
+    "phones_home": "",
+    "phones_dental": " (499)134-01-73, VIP отд. 967-14-21",
+    "position": "11.7.kids"
+  },
+  {
+    "id": 253,
+    "name": "ГБУЗ \"ДГКБ им. З.А.Башляевой ДЗМ\"",
+    "address": "125373, Москва г, Героев-Панфиловцев ул, д.28",
+    "chain": "",
+    "coords": [
+      55.851798,
+      37.403944
+    ],
+    "home": false,
+    "dental": false,
+    "is_hospital": false,
+    "is_for_kids": true,
+    "hours": "",
+    "phones": "967 178-24-14, 916 938-49-51,495 496-74-90",
+    "phones_home": "",
+    "phones_dental": "",
+    "position": "11.8.kids"
+  }
+]
+
