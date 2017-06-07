@@ -72,9 +72,12 @@ function generateContentForMarker(clinic) {
 	}
 
 	content += '<dl class="dl-horizontal">';
-    if (clinic.is_for_kids) {
-        content += '<dt>Для детей</dt><dd></dd>\n';
-    }
+	if (clinic.is_for_kids) {
+		content += '<dt>Для детей</dt><dd></dd>\n';
+	}
+	if (clinic.is_hospital) {
+		content += '<dt>Стационар</dt><dd></dd>\n';
+	}
 	if (clinic.phones) {
 		content += '<dt>Телефоны</dt><dd>' + clinic.phones + '</dd>\n';
 	}
